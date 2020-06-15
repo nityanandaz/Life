@@ -36,10 +36,4 @@ static const NSInteger gridSize = 15;
   [gridView drawGrid:self.grid];
 }
 
--(void)dealloc
-{
-  [grid release];
-  [super dealloc];
-}
-
 @end

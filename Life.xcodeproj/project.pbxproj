@@ -17,7 +17,6 @@
 		3D7BA3612497FF0500264AFE /* LifeAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7BA3522497FF0500264AFE /* LifeAppDelegate.m */; };
 		3D7BA3622497FF0500264AFE /* GridVisitors.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7BA3552497FF0500264AFE /* GridVisitors.m */; };
 		3D7BA3632497FF0500264AFE /* LifeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7BA3572497FF0500264AFE /* LifeController.m */; };
-		3D7BA3642497FF0500264AFE /* TestDefinitions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7BA3582497FF0500264AFE /* TestDefinitions.m */; };
 		3D7BA3652497FF0500264AFE /* GridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7BA35A2497FF0500264AFE /* GridView.m */; };
 		3D7BA3662497FF0500264AFE /* Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7BA35D2497FF0500264AFE /* Cell.m */; };
 		3D7BA3672497FF0500264AFE /* Grid.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7BA35E2497FF0500264AFE /* Grid.m */; };
@@ -65,8 +64,6 @@
 		3D7BA3552497FF0500264AFE /* GridVisitors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridVisitors.m; sourceTree = SOURCE_ROOT; };
 		3D7BA3562497FF0500264AFE /* Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cell.h; sourceTree = SOURCE_ROOT; };
 		3D7BA3572497FF0500264AFE /* LifeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LifeController.m; sourceTree = SOURCE_ROOT; };
-		3D7BA3582497FF0500264AFE /* TestDefinitions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestDefinitions.m; sourceTree = SOURCE_ROOT; };
-		3D7BA3592497FF0500264AFE /* TestDefinitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestDefinitions.h; sourceTree = SOURCE_ROOT; };
 		3D7BA35A2497FF0500264AFE /* GridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridView.m; sourceTree = SOURCE_ROOT; };
 		3D7BA35B2497FF0500264AFE /* GridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridView.h; sourceTree = SOURCE_ROOT; };
 		3D7BA35C2497FF0500264AFE /* GridVisitors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridVisitors.h; sourceTree = SOURCE_ROOT; };
@@ -138,8 +135,6 @@
 				3D7BA3572497FF0500264AFE /* LifeController.m */,
 				3D7BA3602497FF0500264AFE /* NSNumber+Times.h */,
 				3D7BA35F2497FF0500264AFE /* NSNumber+Times.m */,
-				3D7BA3592497FF0500264AFE /* TestDefinitions.h */,
-				3D7BA3582497FF0500264AFE /* TestDefinitions.m */,
 				3D7BA3032497FDD600264AFE /* AppDelegate.h */,
 				3D7BA3042497FDD600264AFE /* AppDelegate.m */,
 				3D7BA3062497FDD600264AFE /* ViewController.h */,
@@ -301,7 +296,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D7BA3612497FF0500264AFE /* LifeAppDelegate.m in Sources */,
-				3D7BA3642497FF0500264AFE /* TestDefinitions.m in Sources */,
 				3D7BA3082497FDD600264AFE /* ViewController.m in Sources */,
 				3D7BA3102497FDD700264AFE /* main.m in Sources */,
 				3D7BA3052497FDD600264AFE /* AppDelegate.m in Sources */,

@@ -14,7 +14,7 @@
 + visitorForView:aView
 {
   DrawingVisitor *visitor = [self new];
-  visitor->view = [aView retain];
+  visitor->view = aView;
   return visitor;
 }
 
@@ -44,12 +44,6 @@
   return denizen;
 }
 
-- (void)dealloc
-{
-  [view release];
-  [super dealloc];
-}
-
 @end
 
 @implementation GridView
@@ -58,8 +52,7 @@
 
 -drawGrid:aGrid
 {
-  [currentGrid autorelease];
-  currentGrid = [aGrid retain];
+  currentGrid = aGrid;
   [self setNeedsDisplay:YES];
   return self;
 }
@@ -78,12 +71,6 @@
   float fractionX = location.x/boundsSize.width;
   float fractionY = location.y/boundsSize.height;
   [self.lifeController changeCellAtRelativeX:fractionX y:fractionY];
-}
-
--(void)dealloc
-{
-  [currentGrid release];
-  [super dealloc];
 }
 
 @end

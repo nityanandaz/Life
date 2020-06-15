@@ -34,14 +34,10 @@ static id deadCell;
 
 -tickOnGrid:grid atX:(NSInteger)x y:(NSInteger)y;
 {
-  return [[self potentialStates]
+  return [[self performSelector:NSSelectorFromString(@"potentialStates")]
 	     objectAtIndex:
 	     [self neighboursOnGrid:grid atX:x y:y]];
 }
-
--retain { return self; }
--(oneway void)release {}
--(NSUInteger)retainCount { return NSUIntegerMax; }
 
 @end
 

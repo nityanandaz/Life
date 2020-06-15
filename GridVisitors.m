@@ -4,7 +4,7 @@
 
 @implementation TickVisitor
 
-+visitor { return [[self new] autorelease]; }
++visitor { return [self new]; }
 
 -visitDenizen:denizen
        onGrid:grid
@@ -22,8 +22,8 @@
 + populateWith:aDenizen
 {
   PopulateVisitor *visitor = [self new];
-  visitor->replacementDenizen = [aDenizen retain];
-  return [visitor autorelease];
+  visitor->replacementDenizen = aDenizen;
+  return visitor;
 }
 
 -visitDenizen:denizen
@@ -35,33 +35,19 @@
   return replacementDenizen;
 }
 
-- (void)dealloc
-{
-  [replacementDenizen release];
-  [super dealloc];
-}
-
 @end
 
 @implementation Visitation
 
 +visitationOnGrid:aGrid ofDimension:(NSInteger)n byVisitor:aVisitor
 {
-  Visitation *aVisitation = [[self new] autorelease];
+  Visitation *aVisitation = [self new];
   aVisitation->allVisited = [NSMutableArray new];
-  aVisitation->grid = [aGrid retain];
-  aVisitation->visitor = [aVisitor retain];
+  aVisitation->grid = aGrid ;
+  aVisitation->visitor = aVisitor;
   aVisitation->cursor = 0;
   aVisitation->dimension = n;
   return aVisitation;
-}
-
--(void)dealloc
-{
-  [allVisited release];
-  [grid release];
-  [visitor release];
-  [super dealloc];
 }
 
 -visitNext
@@ -80,8 +66,8 @@
 
 -visitedGrid
 {
-  return [[[Grid alloc] initWithSideLength:dimension
-				  dwellers:allVisited] autorelease];
+  return [[Grid alloc] initWithSideLength:dimension
+				  dwellers:allVisited];
 }
 
 @end

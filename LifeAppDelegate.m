@@ -1,13 +1,13 @@
 #import "LifeAppDelegate.h"
 
 #import <AppKit/AppKit.h>
-#import <Renaissance/Renaissance.h>
+//#import <Renaissance/Renaissance.h>
 
 @implementation LifeAppDelegate
 
 -(void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-  [NSBundle loadGSMarkupNamed:@"Window" owner:self];
+//  [NSBundle loadGSMarkupNamed:@"Window" owner:self];
 }
 
 -(IBAction)tick:sender
@@ -17,17 +17,16 @@
 
 -(IBAction)runTimer:sender
 {
-  timer = [[NSTimer scheduledTimerWithTimeInterval:0.1
+  timer = [NSTimer scheduledTimerWithTimeInterval:0.1
 					    target:lifeController
 					  selector:@selector(tick:)
 					  userInfo:nil
-					   repeats:YES] retain];
+					   repeats:YES];
 }
 
 -(IBAction)stopTimer:sender
 {
   [timer invalidate];
-  [timer release];
   timer = nil;
 }
 

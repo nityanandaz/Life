@@ -27,7 +27,7 @@
 -configureWithSideLength:(NSInteger)length
 {
   NSAssert(length > 0, @"Grids must have positive length");
-  EmptyCell *empty = [[EmptyCell new] autorelease];
+  EmptyCell *empty = [EmptyCell new];
   id dwellers = [[NSMutableArray alloc] initWithCapacity:length*length];
   [[NSNumber numberWithInteger:length*length]
 	     times:dwellers perform:@selector(addObject:) withObject:empty];
@@ -60,12 +60,6 @@
 +withSideLength:(NSInteger)length
 {
   return [[self alloc] initWithSideLength:length];
-}
-
-- (void)dealloc
-{
-  [array release];
-  [super dealloc];
 }
 
 -atX:(NSInteger)x y:(NSInteger)y put:object
