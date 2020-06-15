@@ -2,8 +2,8 @@
 
 @interface Grid : NSObject <NSCopying>
 {
-  NSArray *array;
-  NSInteger n;
+    NSArray *array;
+    NSInteger n;
 }
 
 +withSideLength:(NSInteger)length;

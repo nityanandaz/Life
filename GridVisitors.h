@@ -5,8 +5,8 @@
 -visitDenizen:denizen
        onGrid:grid
   ofDimension:(NSInteger)n
-	  atX:(NSInteger)x
-	    y:(NSInteger)y;
+          atX:(NSInteger)x
+            y:(NSInteger)y;
 
 @end
 
@@ -21,11 +21,11 @@
 
 @interface Visitation : NSObject
 {
-  id allVisited;
-  id grid;
-  id visitor;
-  NSInteger cursor;
-  NSInteger dimension;
+    id allVisited;
+    id grid;
+    id visitor;
+    NSInteger cursor;
+    NSInteger dimension;
 }
 +visitationOnGrid:aGrid ofDimension:(NSInteger)n byVisitor:aVisitor;
 -visitNext;

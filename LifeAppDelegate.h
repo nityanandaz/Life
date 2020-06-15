@@ -2,7 +2,7 @@
 
 @interface LifeAppDelegate : NSObject
 {
-  id lifeController, timer;
+    id lifeController, timer;
 }
 
 -(void)applicationDidFinishLaunching:(NSNotification *)aNotification;

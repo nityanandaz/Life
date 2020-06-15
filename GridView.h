@@ -3,7 +3,7 @@
 
 @interface GridView : NSView
 {
-  id currentGrid;
+    id currentGrid;
 }
 
 @property (nonatomic, assign) id lifeController;

@@ -18,8 +18,8 @@ static id deadCell;
 
 +(void)load
 {
-  livingCell = [LivingCell new];
-  deadCell = [DeadCell new];
+    livingCell = [LivingCell new];
+    deadCell = [DeadCell new];
 }
 
 +living { return livingCell; }
@@ -27,16 +27,16 @@ static id deadCell;
 
 -(NSInteger)neighboursOnGrid:grid atX:(NSInteger)x y:(NSInteger)y
 {
-  return [[[grid neighboursOfX:x y:y]
-  	    valueForKeyPath:@"@sum.population"]
-  	   integerValue];
+    return [[[grid neighboursOfX:x y:y]
+             valueForKeyPath:@"@sum.population"]
+            integerValue];
 }
 
 -tickOnGrid:grid atX:(NSInteger)x y:(NSInteger)y;
 {
-  return [[self performSelector:NSSelectorFromString(@"potentialStates")]
-	     objectAtIndex:
-	     [self neighboursOnGrid:grid atX:x y:y]];
+    return [[self performSelector:NSSelectorFromString(@"potentialStates")]
+            objectAtIndex:
+            [self neighboursOnGrid:grid atX:x y:y]];
 }
 
 @end
@@ -49,17 +49,17 @@ static id nextStatesFromLiving;
 
 +(void)load
 {
-  nextStatesFromLiving = [[NSArray alloc] initWithObjects:
-					    deadCell,
-					  deadCell,
-					  livingCell,
-					  livingCell,
-					  deadCell,
-					  deadCell,
-					  deadCell,
-					  deadCell,
-					  deadCell,
-					  nil];
+    nextStatesFromLiving = [[NSArray alloc] initWithObjects:
+                            deadCell,
+                            deadCell,
+                            livingCell,
+                            livingCell,
+                            deadCell,
+                            deadCell,
+                            deadCell,
+                            deadCell,
+                            deadCell,
+                            nil];
 }
 
 -potentialStates { return nextStatesFromLiving; }
@@ -74,17 +74,17 @@ static id nextStatesFromDead;
 
 +(void)load
 {
-  nextStatesFromDead = [[NSArray alloc] initWithObjects:
-					  deadCell,
-					deadCell,
-					deadCell,
-					livingCell,
-					deadCell,
-					deadCell,
-					deadCell,
-					deadCell,
-					deadCell,
-					nil];
+    nextStatesFromDead = [[NSArray alloc] initWithObjects:
+                          deadCell,
+                          deadCell,
+                          deadCell,
+                          livingCell,
+                          deadCell,
+                          deadCell,
+                          deadCell,
+                          deadCell,
+                          deadCell,
+                          nil];
 }
 
 -potentialStates { return nextStatesFromDead; }
