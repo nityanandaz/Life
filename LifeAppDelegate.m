@@ -7,6 +7,7 @@
 
 -(void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
+    NSLog(@"Hello from LifeAppDelegate");
     //  [NSBundle loadGSMarkupNamed:@"Window" owner:self];
 }
 

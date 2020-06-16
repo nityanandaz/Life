@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3D7BA3052497FDD600264AFE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7BA3042497FDD600264AFE /* AppDelegate.m */; };
 		3D7BA3082497FDD600264AFE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7BA3072497FDD600264AFE /* ViewController.m */; };
 		3D7BA30A2497FDD700264AFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D7BA3092497FDD700264AFE /* Assets.xcassets */; };
 		3D7BA30D2497FDD700264AFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D7BA30B2497FDD700264AFE /* Main.storyboard */; };
@@ -42,8 +41,6 @@
 
 /* Begin PBXFileReference section */
 		3D7BA3002497FDD600264AFE /* Life.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Life.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		3D7BA3032497FDD600264AFE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		3D7BA3042497FDD600264AFE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		3D7BA3062497FDD600264AFE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		3D7BA3072497FDD600264AFE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		3D7BA3092497FDD700264AFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -135,8 +132,6 @@
 				3D7BA3572497FF0500264AFE /* LifeController.m */,
 				3D7BA3602497FF0500264AFE /* NSNumber+Times.h */,
 				3D7BA35F2497FF0500264AFE /* NSNumber+Times.m */,
-				3D7BA3032497FDD600264AFE /* AppDelegate.h */,
-				3D7BA3042497FDD600264AFE /* AppDelegate.m */,
 				3D7BA3062497FDD600264AFE /* ViewController.h */,
 				3D7BA3072497FDD600264AFE /* ViewController.m */,
 				3D7BA3092497FDD700264AFE /* Assets.xcassets */,
@@ -298,7 +293,6 @@
 				3D7BA3612497FF0500264AFE /* LifeAppDelegate.m in Sources */,
 				3D7BA3082497FDD600264AFE /* ViewController.m in Sources */,
 				3D7BA3102497FDD700264AFE /* main.m in Sources */,
-				3D7BA3052497FDD600264AFE /* AppDelegate.m in Sources */,
 				3D7BA3672497FF0500264AFE /* Grid.m in Sources */,
 				3D7BA3622497FF0500264AFE /* GridVisitors.m in Sources */,
 				3D7BA3682497FF0500264AFE /* NSNumber+Times.m in Sources */,

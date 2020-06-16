@@ -1,6 +1,6 @@
-#import <Foundation/Foundation.h>
+#import <AppKit/AppKit.h>
 
-@interface LifeAppDelegate : NSObject
+@interface LifeAppDelegate : NSObject <NSApplicationDelegate>
 {
     id lifeController, timer;
 }
