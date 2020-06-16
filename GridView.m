@@ -50,6 +50,8 @@
 
 @synthesize lifeController;
 
+// initWithCoder gets called
+
 -drawGrid:aGrid
 {
     currentGrid = aGrid;

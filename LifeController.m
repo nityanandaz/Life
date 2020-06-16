@@ -15,6 +15,11 @@ static const NSInteger gridSize = 15;
 
 @synthesize grid, gridView;
 
+- (void)awakeFromNib
+{
+    [self awakeFromGSMarkup];
+}
+
 -(void)awakeFromGSMarkup
 {
     self.grid = [[Grid withSideLength:gridSize] fillWith:[Cell dead]];

@@ -1,6 +1,9 @@
 #import "LifeAppDelegate.h"
 
 #import <AppKit/AppKit.h>
+
+#import "LifeController.h"
+#import "GridView.h"
 //#import <Renaissance/Renaissance.h>
 
 @implementation LifeAppDelegate
@@ -8,7 +11,16 @@
 -(void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     NSLog(@"Hello from LifeAppDelegate");
-    //  [NSBundle loadGSMarkupNamed:@"Window" owner:self];
+    
+    LifeController *_lifeController = [LifeController new];
+    lifeController = _lifeController;
+    
+    GridView *gridView = (GridView*)[[[NSApp mainWindow] contentViewController] view];
+    
+    [gridView setLifeController:lifeController];
+    [lifeController setGridView:gridView];
+    
+    [lifeController awakeFromNib];
 }
 
 -(IBAction)tick:sender
