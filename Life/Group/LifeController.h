@@ -2,8 +2,7 @@
 
 @interface LifeController : NSObject
 {
-  id grid;
-  id gridView;
+    id grid;
 }
 
 @property (retain, readonly, nonatomic) id grid;
