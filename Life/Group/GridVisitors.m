@@ -2,26 +2,6 @@
 #import "Grid.h"
 #import "Cell.h"
 
-@implementation PopulateVisitor
-
-+ populateWith:aDenizen
-{
-    PopulateVisitor *visitor = [self new];
-    visitor->replacementDenizen = aDenizen;
-    return visitor;
-}
-
--visitDenizen:denizen
-       onGrid:grid
-  ofDimension:(NSInteger)n
-          atX:(NSInteger)x
-            y:(NSInteger)y
-{
-    return replacementDenizen;
-}
-
-@end
-
 @implementation Visitation
 
 +visitationOnGrid:aGrid ofDimension:(NSInteger)n byVisitor:aVisitor

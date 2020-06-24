@@ -124,7 +124,7 @@
 
 -fillWith:denizen
 {
-    return [self visit:[PopulateVisitor populateWith:denizen]];
+    return [self visit:[SwiftPopulateVisitor populateWith:denizen]];
 }
 
 -visit:visitor

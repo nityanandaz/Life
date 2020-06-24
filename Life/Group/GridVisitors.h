@@ -10,11 +10,6 @@
 
 @end
 
-@interface PopulateVisitor:NSObject <GridVisitor>
-{ id replacementDenizen; }
-+ populateWith:aDenizen;
-@end
-
 @interface Visitation : NSObject
 {
     id allVisited;

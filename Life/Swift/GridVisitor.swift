@@ -21,3 +21,21 @@ extension SwiftTickVisitor: GridVisitor {
         return (denizen as? Cell)?.tick(onGrid: grid, atX: x, y: y)
     }
 }
+
+@objc
+class SwiftPopulateVisitor: NSObject {
+    var replacementDenizen: Any!
+    
+    @objc
+    static func populateWith(_ denizen: Any!) -> Any! {
+        let visitor = SwiftPopulateVisitor()
+        visitor.replacementDenizen = denizen
+        return visitor
+    }
+}
+
+extension SwiftPopulateVisitor: GridVisitor {
+    func visitDenizen(_ denizen: Any!, onGrid grid: Any!, ofDimension n: Int, atX x: Int, y: Int) -> Any! {
+        return replacementDenizen
+    }
+}
