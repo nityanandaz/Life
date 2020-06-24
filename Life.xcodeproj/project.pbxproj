@@ -20,7 +20,7 @@
 		3D7BA3662497FF0500264AFE /* Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7BA35D2497FF0500264AFE /* Cell.m */; };
 		3D7BA3672497FF0500264AFE /* Grid.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7BA35E2497FF0500264AFE /* Grid.m */; };
 		3D7BA3682497FF0500264AFE /* NSNumber+Times.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7BA35F2497FF0500264AFE /* NSNumber+Times.m */; };
-		3DC5BA26249C017E00F3B86A /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC5BA25249C017E00F3B86A /* File.swift */; };
+		3DC5BA26249C017E00F3B86A /* GridVisitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC5BA25249C017E00F3B86A /* GridVisitor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,7 +70,7 @@
 		3D7BA35F2497FF0500264AFE /* NSNumber+Times.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSNumber+Times.m"; path = "Life/Group/NSNumber+Times.m"; sourceTree = SOURCE_ROOT; };
 		3D7BA3602497FF0500264AFE /* NSNumber+Times.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSNumber+Times.h"; path = "Life/Group/NSNumber+Times.h"; sourceTree = SOURCE_ROOT; };
 		3DC5BA24249C017E00F3B86A /* Life-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Life-Bridging-Header.h"; sourceTree = "<group>"; };
-		3DC5BA25249C017E00F3B86A /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		3DC5BA25249C017E00F3B86A /* GridVisitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridVisitor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +142,7 @@
 		3D7BA3022497FDD600264AFE /* Life */ = {
 			isa = PBXGroup;
 			children = (
+				3DE6C54624A3F0B90023843A /* Swift */,
 				3D28365D249934510067C232 /* Group */,
 				3D7BA3062497FDD600264AFE /* ViewController.h */,
 				3D7BA3072497FDD600264AFE /* ViewController.m */,
@@ -150,7 +151,6 @@
 				3D7BA30E2497FDD700264AFE /* Info.plist */,
 				3D7BA30F2497FDD700264AFE /* main.m */,
 				3D7BA3112497FDD700264AFE /* Life.entitlements */,
-				3DC5BA25249C017E00F3B86A /* File.swift */,
 				3DC5BA24249C017E00F3B86A /* Life-Bridging-Header.h */,
 			);
 			path = Life;
@@ -172,6 +172,14 @@
 				3D7BA3272497FDD700264AFE /* Info.plist */,
 			);
 			path = LifeUITests;
+			sourceTree = "<group>";
+		};
+		3DE6C54624A3F0B90023843A /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				3DC5BA25249C017E00F3B86A /* GridVisitor.swift */,
+			);
+			path = Swift;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,7 +317,7 @@
 				3D7BA3102497FDD700264AFE /* main.m in Sources */,
 				3D7BA3672497FF0500264AFE /* Grid.m in Sources */,
 				3D7BA3622497FF0500264AFE /* GridVisitors.m in Sources */,
-				3DC5BA26249C017E00F3B86A /* File.swift in Sources */,
+				3DC5BA26249C017E00F3B86A /* GridVisitor.swift in Sources */,
 				3D7BA3682497FF0500264AFE /* NSNumber+Times.m in Sources */,
 				3D7BA3652497FF0500264AFE /* GridView.m in Sources */,
 				3D7BA3632497FF0500264AFE /* LifeController.m in Sources */,

@@ -2,21 +2,6 @@
 #import "Grid.h"
 #import "Cell.h"
 
-@implementation TickVisitor
-
-+visitor { return [self new]; }
-
--visitDenizen:denizen
-       onGrid:grid
-  ofDimension:(NSInteger)n
-          atX:(NSInteger)x
-            y:(NSInteger)y
-{
-    return [denizen tickOnGrid:grid atX:x y:y];
-}
-
-@end
-
 @implementation PopulateVisitor
 
 + populateWith:aDenizen

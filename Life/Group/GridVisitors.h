@@ -10,10 +10,6 @@
 
 @end
 
-@interface TickVisitor:NSObject <GridVisitor>
-+visitor;
-@end
-
 @interface PopulateVisitor:NSObject <GridVisitor>
 { id replacementDenizen; }
 + populateWith:aDenizen;
