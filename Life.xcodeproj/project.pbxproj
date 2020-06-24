@@ -20,6 +20,7 @@
 		3D7BA3662497FF0500264AFE /* Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7BA35D2497FF0500264AFE /* Cell.m */; };
 		3D7BA3672497FF0500264AFE /* Grid.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7BA35E2497FF0500264AFE /* Grid.m */; };
 		3D7BA3682497FF0500264AFE /* NSNumber+Times.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7BA35F2497FF0500264AFE /* NSNumber+Times.m */; };
+		3DC5BA26249C017E00F3B86A /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC5BA25249C017E00F3B86A /* File.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,8 @@
 		3D7BA35E2497FF0500264AFE /* Grid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Grid.m; path = Life/Group/Grid.m; sourceTree = SOURCE_ROOT; };
 		3D7BA35F2497FF0500264AFE /* NSNumber+Times.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSNumber+Times.m"; path = "Life/Group/NSNumber+Times.m"; sourceTree = SOURCE_ROOT; };
 		3D7BA3602497FF0500264AFE /* NSNumber+Times.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSNumber+Times.h"; path = "Life/Group/NSNumber+Times.h"; sourceTree = SOURCE_ROOT; };
+		3DC5BA24249C017E00F3B86A /* Life-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Life-Bridging-Header.h"; sourceTree = "<group>"; };
+		3DC5BA25249C017E00F3B86A /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +150,8 @@
 				3D7BA30E2497FDD700264AFE /* Info.plist */,
 				3D7BA30F2497FDD700264AFE /* main.m */,
 				3D7BA3112497FDD700264AFE /* Life.entitlements */,
+				3DC5BA25249C017E00F3B86A /* File.swift */,
+				3DC5BA24249C017E00F3B86A /* Life-Bridging-Header.h */,
 			);
 			path = Life;
 			sourceTree = "<group>";
@@ -236,6 +241,7 @@
 				TargetAttributes = {
 					3D7BA2FF2497FDD600264AFE = {
 						CreatedOnToolsVersion = 11.4;
+						LastSwiftMigration = 1140;
 					};
 					3D7BA3152497FDD700264AFE = {
 						CreatedOnToolsVersion = 11.4;
@@ -303,6 +309,7 @@
 				3D7BA3102497FDD700264AFE /* main.m in Sources */,
 				3D7BA3672497FF0500264AFE /* Grid.m in Sources */,
 				3D7BA3622497FF0500264AFE /* GridVisitors.m in Sources */,
+				3DC5BA26249C017E00F3B86A /* File.swift in Sources */,
 				3D7BA3682497FF0500264AFE /* NSNumber+Times.m in Sources */,
 				3D7BA3652497FF0500264AFE /* GridView.m in Sources */,
 				3D7BA3632497FF0500264AFE /* LifeController.m in Sources */,
@@ -466,6 +473,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Life/Life.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -476,6 +484,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = eu.nityananda.Life;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Life/Life-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -483,6 +494,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Life/Life.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -493,12 +505,15 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = eu.nityananda.Life;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Life/Life-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
 		3D7BA32E2497FDD700264AFE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -518,6 +533,7 @@
 		3D7BA32F2497FDD700264AFE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -537,6 +553,7 @@
 		3D7BA3312497FDD700264AFE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = LifeUITests/Info.plist;
@@ -554,6 +571,7 @@
 		3D7BA3322497FDD700264AFE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = LifeUITests/Info.plist;
