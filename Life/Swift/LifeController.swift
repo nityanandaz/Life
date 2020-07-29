@@ -17,6 +17,7 @@ class LifeController: NSObject {
     override func awakeFromNib() {
         grid = (Grid.withSideLength(Self.gridSize) as? Grid)?
             .fill(with: Cell.dead()) as? Grid
+        gridView.drawGrid(grid)
     }
     
     @objc
