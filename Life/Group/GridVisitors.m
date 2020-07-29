@@ -1,6 +1,7 @@
 #import "GridVisitors.h"
 #import "Grid.h"
 #import "Cell.h"
+#import "Life-Swift.h"
 
 @implementation Visitation
 

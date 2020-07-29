@@ -1,15 +1,5 @@
 #import <Foundation/Foundation.h>
 
-@protocol GridVisitor <NSObject>
-
--visitDenizen:denizen
-       onGrid:grid
-  ofDimension:(NSInteger)n
-          atX:(NSInteger)x
-            y:(NSInteger)y;
-
-@end
-
 @interface Visitation : NSObject
 {
     id allVisited;
