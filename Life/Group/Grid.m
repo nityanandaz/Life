@@ -118,12 +118,12 @@
 
 -tick
 {
-    return [self visit:[SwiftTickVisitor visitor]];
+    return [self visit:[TickVisitor visitor]];
 }
 
 -fillWith:denizen
 {
-    return [self visit:[SwiftPopulateVisitor populateWith:denizen]];
+    return [self visit:[PopulateVisitor populateWith:denizen]];
 }
 
 -visit:visitor

@@ -9,33 +9,41 @@
 import Foundation
 
 @objc
-class SwiftTickVisitor: NSObject {
+class TickVisitor: NSObject {
     @objc
-    static func visitor() -> SwiftTickVisitor {
-        return SwiftTickVisitor()
+    static func visitor() -> TickVisitor {
+        return TickVisitor()
     }
 }
 
-extension SwiftTickVisitor: GridVisitor {
-    func visitDenizen(_ denizen: Any!, onGrid grid: Any!, ofDimension n: Int, atX x: Int, y: Int) -> Any! {
+extension TickVisitor: GridVisitor {
+    func visitDenizen(_ denizen: Any!,
+                      onGrid grid: Any!,
+                      ofDimension n: Int,
+                      atX x: Int,
+                      y: Int) -> Any! {
         return (denizen as? Cell)?.tick(onGrid: grid, atX: x, y: y)
     }
 }
 
 @objc
-class SwiftPopulateVisitor: NSObject {
+class PopulateVisitor: NSObject {
     var replacementDenizen: Any!
     
     @objc
     static func populateWith(_ denizen: Any!) -> Any! {
-        let visitor = SwiftPopulateVisitor()
+        let visitor = PopulateVisitor()
         visitor.replacementDenizen = denizen
         return visitor
     }
 }
 
-extension SwiftPopulateVisitor: GridVisitor {
-    func visitDenizen(_ denizen: Any!, onGrid grid: Any!, ofDimension n: Int, atX x: Int, y: Int) -> Any! {
+extension PopulateVisitor: GridVisitor {
+    func visitDenizen(_ denizen: Any!,
+                      onGrid grid: Any!,
+                      ofDimension n: Int,
+                      atX x: Int,
+                      y: Int) -> Any! {
         return replacementDenizen
     }
 }
