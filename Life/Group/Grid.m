@@ -1,5 +1,4 @@
 #import "Grid.h"
-#import "GridVisitors.h"
 #import "Life-Swift.h"
 
 @interface EmptyCell : NSObject
