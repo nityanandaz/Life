@@ -21,7 +21,6 @@ class LifeAppDelegate: NSObject, NSApplicationDelegate {
         
         gridView?.lifeController = lifeController
         lifeController.gridView = gridView
-        
         lifeController.awakeFromNib()
     }
 }
@@ -40,7 +39,7 @@ extension LifeAppDelegate {
     }
     
     @IBAction func stopTimer(_ sender: Any) {
-        timer.invalidate()
+        timer?.invalidate()
         timer = nil
     }
 }

@@ -6,4 +6,3 @@
 #import "Grid.h"
 #import "GridView.h"
 #import "GridVisitors.h"
-#import "LifeController.h"

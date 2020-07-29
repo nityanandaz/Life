@@ -2,7 +2,7 @@
 #import "Cell.h"
 #import "Grid.h"
 #import "GridVisitors.h"
-#import "LifeController.h"
+#import "Life-Swift.h"
 
 @interface DrawingVisitor:NSObject <GridVisitor>
 { id view; }
