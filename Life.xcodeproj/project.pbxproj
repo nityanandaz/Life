@@ -163,13 +163,21 @@
 			path = LifeUITests;
 			sourceTree = "<group>";
 		};
+		3DA3127E24D1ADBA00134C42 /* GridVisitors */ = {
+			isa = PBXGroup;
+			children = (
+				3DC5BA25249C017E00F3B86A /* GridVisitor.swift */,
+				3DA3127C24D1AB7900134C42 /* TickVisitor.swift */,
+				3DA3127A24D1A9A500134C42 /* PopulateVisitor.swift */,
+			);
+			path = GridVisitors;
+			sourceTree = "<group>";
+		};
 		3DE6C54624A3F0B90023843A /* Swift */ = {
 			isa = PBXGroup;
 			children = (
 				3DA3127824D198B900134C42 /* GridView.swift */,
-				3DC5BA25249C017E00F3B86A /* GridVisitor.swift */,
-				3DA3127C24D1AB7900134C42 /* TickVisitor.swift */,
-				3DA3127A24D1A9A500134C42 /* PopulateVisitor.swift */,
+				3DA3127E24D1ADBA00134C42 /* GridVisitors */,
 				3DA3127424D1825100134C42 /* LifeAppDelegate.swift */,
 				3DA3127624D18BF100134C42 /* LifeController.swift */,
 				3DA3127024D178BD00134C42 /* NSNumber+Times.swift */,
