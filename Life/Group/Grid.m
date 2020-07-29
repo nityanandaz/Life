@@ -1,13 +1,6 @@
 #import "Grid.h"
 #import "Life-Swift.h"
 
-@interface EmptyCell : NSObject
-@end
-
-@implementation EmptyCell
--tickOnGrid:grid atX:(NSInteger)x y:(NSInteger)y { return self; }
-@end
-
 @interface Grid (guts)
 -(NSInteger)indexForX:(NSInteger)x y:(NSInteger)y;
 -configureWithSideLength:(NSInteger)length;

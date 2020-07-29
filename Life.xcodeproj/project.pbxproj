@@ -22,6 +22,7 @@
 		3DA3127B24D1A9A500134C42 /* PopulateVisitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA3127A24D1A9A500134C42 /* PopulateVisitor.swift */; };
 		3DA3127D24D1AB7900134C42 /* TickVisitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA3127C24D1AB7900134C42 /* TickVisitor.swift */; };
 		3DA3128024D1ADF500134C42 /* Visitation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA3127F24D1ADF500134C42 /* Visitation.swift */; };
+		3DA3128224D1B4A000134C42 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA3128124D1B4A000134C42 /* Cell.swift */; };
 		3DC5BA26249C017E00F3B86A /* GridVisitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC5BA25249C017E00F3B86A /* GridVisitor.swift */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +68,7 @@
 		3DA3127A24D1A9A500134C42 /* PopulateVisitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopulateVisitor.swift; sourceTree = "<group>"; };
 		3DA3127C24D1AB7900134C42 /* TickVisitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickVisitor.swift; sourceTree = "<group>"; };
 		3DA3127F24D1ADF500134C42 /* Visitation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Visitation.swift; sourceTree = "<group>"; };
+		3DA3128124D1B4A000134C42 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		3DC5BA24249C017E00F3B86A /* Life-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Life-Bridging-Header.h"; sourceTree = "<group>"; };
 		3DC5BA25249C017E00F3B86A /* GridVisitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridVisitor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -173,6 +175,7 @@
 		3DE6C54624A3F0B90023843A /* Swift */ = {
 			isa = PBXGroup;
 			children = (
+				3DA3128124D1B4A000134C42 /* Cell.swift */,
 				3DA3127824D198B900134C42 /* GridView.swift */,
 				3DA3127E24D1ADBA00134C42 /* GridVisitors */,
 				3DA3127424D1825100134C42 /* LifeAppDelegate.swift */,
@@ -319,6 +322,7 @@
 				3DA3127324D1815B00134C42 /* ViewController.swift in Sources */,
 				3DA3127924D198B900134C42 /* GridView.swift in Sources */,
 				3DA3127124D178BD00134C42 /* NSNumber+Times.swift in Sources */,
+				3DA3128224D1B4A000134C42 /* Cell.swift in Sources */,
 				3DA3128024D1ADF500134C42 /* Visitation.swift in Sources */,
 				3DA3127B24D1A9A500134C42 /* PopulateVisitor.swift in Sources */,
 				3DA3127D24D1AB7900134C42 /* TickVisitor.swift in Sources */,
