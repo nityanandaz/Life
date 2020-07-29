@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3D7BA3082497FDD600264AFE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7BA3072497FDD600264AFE /* ViewController.m */; };
 		3D7BA30A2497FDD700264AFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D7BA3092497FDD700264AFE /* Assets.xcassets */; };
 		3D7BA30D2497FDD700264AFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D7BA30B2497FDD700264AFE /* Main.storyboard */; };
 		3D7BA3102497FDD700264AFE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7BA30F2497FDD700264AFE /* main.m */; };
@@ -20,6 +19,7 @@
 		3D7BA3662497FF0500264AFE /* Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7BA35D2497FF0500264AFE /* Cell.m */; };
 		3D7BA3672497FF0500264AFE /* Grid.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7BA35E2497FF0500264AFE /* Grid.m */; };
 		3DA3127124D178BD00134C42 /* NSNumber+Times.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA3127024D178BD00134C42 /* NSNumber+Times.swift */; };
+		3DA3127324D1815B00134C42 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA3127224D1815B00134C42 /* ViewController.swift */; };
 		3DC5BA26249C017E00F3B86A /* GridVisitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC5BA25249C017E00F3B86A /* GridVisitor.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,8 +42,6 @@
 
 /* Begin PBXFileReference section */
 		3D7BA3002497FDD600264AFE /* Life.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Life.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		3D7BA3062497FDD600264AFE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		3D7BA3072497FDD600264AFE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		3D7BA3092497FDD700264AFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D7BA30C2497FDD700264AFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3D7BA30E2497FDD700264AFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -68,6 +66,7 @@
 		3D7BA35D2497FF0500264AFE /* Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Cell.m; path = Life/Group/Cell.m; sourceTree = SOURCE_ROOT; };
 		3D7BA35E2497FF0500264AFE /* Grid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Grid.m; path = Life/Group/Grid.m; sourceTree = SOURCE_ROOT; };
 		3DA3127024D178BD00134C42 /* NSNumber+Times.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSNumber+Times.swift"; sourceTree = "<group>"; };
+		3DA3127224D1815B00134C42 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3DC5BA24249C017E00F3B86A /* Life-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Life-Bridging-Header.h"; sourceTree = "<group>"; };
 		3DC5BA25249C017E00F3B86A /* GridVisitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridVisitor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -141,8 +140,6 @@
 			children = (
 				3DE6C54624A3F0B90023843A /* Swift */,
 				3D28365D249934510067C232 /* Group */,
-				3D7BA3062497FDD600264AFE /* ViewController.h */,
-				3D7BA3072497FDD600264AFE /* ViewController.m */,
 				3D7BA3092497FDD700264AFE /* Assets.xcassets */,
 				3D7BA30B2497FDD700264AFE /* Main.storyboard */,
 				3D7BA30E2497FDD700264AFE /* Info.plist */,
@@ -176,6 +173,7 @@
 			children = (
 				3DC5BA25249C017E00F3B86A /* GridVisitor.swift */,
 				3DA3127024D178BD00134C42 /* NSNumber+Times.swift */,
+				3DA3127224D1815B00134C42 /* ViewController.swift */,
 			);
 			path = Swift;
 			sourceTree = "<group>";
@@ -311,9 +309,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D7BA3612497FF0500264AFE /* LifeAppDelegate.m in Sources */,
-				3D7BA3082497FDD600264AFE /* ViewController.m in Sources */,
 				3D7BA3102497FDD700264AFE /* main.m in Sources */,
 				3D7BA3672497FF0500264AFE /* Grid.m in Sources */,
+				3DA3127324D1815B00134C42 /* ViewController.swift in Sources */,
 				3DA3127124D178BD00134C42 /* NSNumber+Times.swift in Sources */,
 				3D7BA3622497FF0500264AFE /* GridVisitors.m in Sources */,
 				3DC5BA26249C017E00F3B86A /* GridVisitor.swift in Sources */,
