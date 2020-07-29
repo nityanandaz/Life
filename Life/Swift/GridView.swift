@@ -8,13 +8,15 @@
 
 import Cocoa
 
-class DrawingVisitor: NSObject, GridVisitor {
+class DrawingVisitor: NSObject {
     var view: NSView
     
     init(view: NSView) {
         self.view = view
     }
-    
+}
+
+extension DrawingVisitor: GridVisitor {
     func visitDenizen(_ denizen: Any!,
                       onGrid grid: Any!,
                       ofDimension n: Int,
@@ -44,8 +46,6 @@ class DrawingVisitor: NSObject, GridVisitor {
         
         return denizen
     }
-    
-    
 }
 
 class GridView: NSView {
