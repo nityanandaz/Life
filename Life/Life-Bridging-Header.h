@@ -4,5 +4,4 @@
 
 #import "Cell.h"
 #import "Grid.h"
-#import "GridView.h"
 #import "GridVisitors.h"
