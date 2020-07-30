@@ -21,7 +21,7 @@ class GridView: NSView {
     }
     
     override func draw(_ dirtyRect: NSRect) {
-        currentGrid?.visit(DrawingVisitor(view: self))
+        _ = currentGrid?.visit(DrawingVisitor(view: self))
     }
     
     override func mouseUp(with event: NSEvent) {

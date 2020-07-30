@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3D38D93424D2B71000B41856 /* Grid+Guts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D38D93324D2B71000B41856 /* Grid+Guts.swift */; };
 		3D38D93824D2E43C00B41856 /* DrawingVisitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D38D93724D2E43C00B41856 /* DrawingVisitor.swift */; };
 		3D38D93A24D309E500B41856 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D38D93924D309E500B41856 /* Grid.swift */; };
 		3D7BA30A2497FDD700264AFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D7BA3092497FDD700264AFE /* Assets.xcassets */; };
@@ -44,7 +43,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3D38D93324D2B71000B41856 /* Grid+Guts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Grid+Guts.swift"; sourceTree = "<group>"; };
 		3D38D93724D2E43C00B41856 /* DrawingVisitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingVisitor.swift; sourceTree = "<group>"; };
 		3D38D93924D309E500B41856 /* Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
 		3D7BA3002497FDD600264AFE /* Life.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Life.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -164,7 +162,6 @@
 			children = (
 				3DA3128124D1B4A000134C42 /* Cell.swift */,
 				3D38D93924D309E500B41856 /* Grid.swift */,
-				3D38D93324D2B71000B41856 /* Grid+Guts.swift */,
 				3DA3127824D198B900134C42 /* GridView.swift */,
 				3DA3127E24D1ADBA00134C42 /* GridVisitors */,
 				3DA3127424D1825100134C42 /* LifeAppDelegate.swift */,
@@ -307,7 +304,6 @@
 			files = (
 				3D7BA3102497FDD700264AFE /* main.m in Sources */,
 				3D38D93824D2E43C00B41856 /* DrawingVisitor.swift in Sources */,
-				3D38D93424D2B71000B41856 /* Grid+Guts.swift in Sources */,
 				3DA3127324D1815B00134C42 /* ViewController.swift in Sources */,
 				3DA3127924D198B900134C42 /* GridView.swift in Sources */,
 				3DA3128224D1B4A000134C42 /* Cell.swift in Sources */,
