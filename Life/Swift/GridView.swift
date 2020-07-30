@@ -22,7 +22,7 @@ extension DrawingVisitor: GridVisitor {
                       ofDimension n: Int,
                       atX x: Int,
                       y: Int) -> Any! {
-        let denizen = denizen as! SwiftCell
+        let denizen = denizen as! Cell
         let (n, x, y) = (CGFloat(n), CGFloat(x), CGFloat(y))
         
         let beginningHorizontal = x / n

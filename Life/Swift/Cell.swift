@@ -21,9 +21,9 @@ extension EmptyCell: Tickable {
     }
 }
 
-class SwiftCell: NSObject {
-    static let livingCell = SwiftLivingCell()
-    static let deadCell = SwiftDeadCell()
+class Cell: NSObject {
+    static let livingCell = LivingCell()
+    static let deadCell = DeadCell()
     
     static func living() -> Any! {
         livingCell
@@ -42,7 +42,7 @@ class SwiftCell: NSObject {
 }
 
 @objc
-extension SwiftCell {
+extension Cell {
     func potentialStates() -> NSArray {
         fatalError()
     }
@@ -52,7 +52,7 @@ extension SwiftCell {
     }
 }
 
-extension SwiftCell: Tickable {
+extension Cell: Tickable {
     func tick(onGrid grid: Any!, atX x: Int, y: Int) -> Any! {
         potentialStates().object(
             at: neighbours(onGrid: grid, atX: x, y: y))
@@ -60,7 +60,7 @@ extension SwiftCell: Tickable {
 }
 
 
-class SwiftLivingCell: SwiftCell {
+class LivingCell: Cell {
     static let nextStatesFromLiving = NSArray(array: [
         deadCell,
         deadCell,
@@ -75,7 +75,7 @@ class SwiftLivingCell: SwiftCell {
 }
 
 @objc
-extension SwiftLivingCell {
+extension LivingCell {
     override func potentialStates() -> NSArray {
         Self.nextStatesFromLiving
     }
@@ -89,7 +89,7 @@ extension SwiftLivingCell {
     }
 }
 
-class SwiftDeadCell: SwiftCell {
+class DeadCell: Cell {
     static let nextStatesFromDead = NSArray(array: [
         deadCell,
         deadCell,
@@ -104,7 +104,7 @@ class SwiftDeadCell: SwiftCell {
 }
 
 @objc
-extension SwiftDeadCell {
+extension DeadCell {
     override func potentialStates() -> NSArray {
         Self.nextStatesFromDead
     }

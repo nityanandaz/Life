@@ -23,6 +23,6 @@ extension TickVisitor: GridVisitor {
                       ofDimension n: Int,
                       atX x: Int,
                       y: Int) -> Any! {
-        return (denizen as? SwiftCell)?.tick(onGrid: grid, atX: x, y: y)
+        return (denizen as? Cell)?.tick(onGrid: grid, atX: x, y: y)
     }
 }
