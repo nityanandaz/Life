@@ -11,21 +11,15 @@ import Foundation
 class PopulateVisitor: NSObject {
     var replacementDenizen: Any!
     
+    @objc
     init(replacementDenizen: Any!) {
         self.replacementDenizen = replacementDenizen
     }
 }
 
-@objc
-extension PopulateVisitor {
-    static func populateWith(_ denizen: Any!) -> PopulateVisitor {
-        return PopulateVisitor(replacementDenizen: denizen)
-    }
-}
-
 extension PopulateVisitor: GridVisitor {
     func visitDenizen(_ denizen: Any!,
-                      onGrid grid: Any!,
+                      onGrid grid: Grid,
                       ofDimension n: Int,
                       atX x: Int,
                       y: Int) -> Any! {

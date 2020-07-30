@@ -51,12 +51,12 @@
 
 -tick
 {
-    return [self visit:[TickVisitor visitor]];
+    return [self visit:[[TickVisitor alloc] init]];
 }
 
 -fillWith:denizen
 {
-    return [self visit:[PopulateVisitor populateWith:denizen]];
+    return [self visit:[[PopulateVisitor alloc] initWithReplacementDenizen:denizen]];
 }
 
 -visit:visitor

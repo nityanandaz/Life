@@ -10,16 +10,9 @@ import Foundation
 
 class TickVisitor: NSObject {}
 
-@objc
-extension TickVisitor {
-    static func visitor() -> TickVisitor {
-        return TickVisitor()
-    }
-}
-
 extension TickVisitor: GridVisitor {
     func visitDenizen(_ denizen: Any!,
-                      onGrid grid: Any!,
+                      onGrid grid: Grid,
                       ofDimension n: Int,
                       atX x: Int,
                       y: Int) -> Any! {

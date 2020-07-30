@@ -10,7 +10,7 @@ import Foundation
 
 @objc protocol GridVisitor: NSObjectProtocol {
     func visitDenizen(_ denizen: Any!,
-                      onGrid grid: Any!,
+                      onGrid grid: Grid,
                       ofDimension n: Int,
                       atX x: Int,
                       y: Int) -> Any!
