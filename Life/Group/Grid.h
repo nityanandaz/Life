@@ -1,10 +1,9 @@
 #import <Foundation/Foundation.h>
 
 @interface Grid : NSObject <NSCopying>
-{
-    NSArray *array;
-    NSInteger n;
-}
+
+@property NSArray *array;
+@property NSInteger n;
 
 +withSideLength:(NSInteger)length;
 -initWithSideLength:(NSInteger)length dwellers:anArray;

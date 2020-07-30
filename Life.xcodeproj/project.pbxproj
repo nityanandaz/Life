@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3D38D93224D2B43000B41856 /* Grid+Neighbours.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D38D93124D2B43000B41856 /* Grid+Neighbours.swift */; };
+		3D38D93424D2B71000B41856 /* Grid+Guts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D38D93324D2B71000B41856 /* Grid+Guts.swift */; };
 		3D7BA30A2497FDD700264AFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D7BA3092497FDD700264AFE /* Assets.xcassets */; };
 		3D7BA30D2497FDD700264AFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D7BA30B2497FDD700264AFE /* Main.storyboard */; };
 		3D7BA3102497FDD700264AFE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7BA30F2497FDD700264AFE /* main.m */; };
@@ -46,6 +47,7 @@
 
 /* Begin PBXFileReference section */
 		3D38D93124D2B43000B41856 /* Grid+Neighbours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Grid+Neighbours.swift"; sourceTree = "<group>"; };
+		3D38D93324D2B71000B41856 /* Grid+Guts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Grid+Guts.swift"; sourceTree = "<group>"; };
 		3D7BA3002497FDD600264AFE /* Life.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Life.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D7BA3092497FDD700264AFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D7BA30C2497FDD700264AFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -178,6 +180,8 @@
 			isa = PBXGroup;
 			children = (
 				3DA3128124D1B4A000134C42 /* Cell.swift */,
+				3D38D93324D2B71000B41856 /* Grid+Guts.swift */,
+				3D38D93124D2B43000B41856 /* Grid+Neighbours.swift */,
 				3DA3127824D198B900134C42 /* GridView.swift */,
 				3DA3127E24D1ADBA00134C42 /* GridVisitors */,
 				3DA3127424D1825100134C42 /* LifeAppDelegate.swift */,
@@ -185,7 +189,6 @@
 				3DA3127024D178BD00134C42 /* NSNumber+Times.swift */,
 				3DA3127224D1815B00134C42 /* ViewController.swift */,
 				3DA3127F24D1ADF500134C42 /* Visitation.swift */,
-				3D38D93124D2B43000B41856 /* Grid+Neighbours.swift */,
 			);
 			path = Swift;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 			files = (
 				3D7BA3102497FDD700264AFE /* main.m in Sources */,
 				3D7BA3672497FF0500264AFE /* Grid.m in Sources */,
+				3D38D93424D2B71000B41856 /* Grid+Guts.swift in Sources */,
 				3DA3127324D1815B00134C42 /* ViewController.swift in Sources */,
 				3DA3127924D198B900134C42 /* GridView.swift in Sources */,
 				3DA3127124D178BD00134C42 /* NSNumber+Times.swift in Sources */,
