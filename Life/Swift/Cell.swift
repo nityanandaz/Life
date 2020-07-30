@@ -24,18 +24,19 @@ class Cell: NSObject {
     static let livingCell = LivingCell()
     static let deadCell = DeadCell()
     
-    func neighbours(onGrid grid: Any!, atX x: Int, y: Int) -> Int! {
-        let grid = grid as! Grid
-        let neighbours = grid.neighboursOf(x: x, y: y) as! NSArray // NSMutableArray?
-        return neighbours
-            .value(forKeyPath: "@sum.population") as? Int
-    }
-    
-    func potentialStates() -> [Cell] {
+    var population: Int {
         fatalError()
     }
     
-    func population() -> Int {
+    func neighbours(onGrid grid: Any!, atX x: Int, y: Int) -> Int {
+        let grid = grid as! Grid
+        let neighbours = grid.neighboursOf(x: x, y: y) as! [Cell]
+        return neighbours
+            .map(\.population)
+            .reduce(0, +)
+    }
+    
+    func potentialStates() -> [Cell] {
         fatalError()
     }
 }
@@ -60,13 +61,10 @@ class LivingCell: Cell {
         deadCell,
     ]
     
+    override var population: Int { 1 }
+    
     override func potentialStates() -> [Cell] {
         Self.nextStatesFromLiving
-    }
-    
-    @objc
-    override func population() -> Int {
-        1
     }
     
     @objc
@@ -88,13 +86,10 @@ class DeadCell: Cell {
         deadCell,
     ]
     
+    override var population: Int { 0 }
+    
     override func potentialStates() -> [Cell] {
         Self.nextStatesFromDead
-    }
-    
-    @objc
-    override func population() -> Int {
-        0
     }
     
     @objc

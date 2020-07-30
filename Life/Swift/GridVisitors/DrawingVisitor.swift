@@ -37,10 +37,10 @@ extension DrawingVisitor: GridVisitor {
                               height: verticalExtent * boundsSize.height)
         
         let path = NSBezierPath(rect: cellRect)
-        NSColor(calibratedWhite: CGFloat(denizen.population()),
+        NSColor(calibratedWhite: CGFloat(denizen.population),
                 alpha: 1.0).set()
         path.stroke()
-        NSColor(calibratedWhite: 1.0 - CGFloat(denizen.population()),
+        NSColor(calibratedWhite: 1.0 - CGFloat(denizen.population),
                 alpha: 1.0).set()
         path.fill()
         
