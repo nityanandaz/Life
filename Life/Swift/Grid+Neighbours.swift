@@ -10,26 +10,18 @@ import Foundation
 
 @objc
 extension Grid {
-    func _verticalNeighboursOfX(_ x: Int, y: Int) -> NSArray {
-        [
+    func neighboursOf(x: Int, y: Int) -> [Cell] {
+        [ // Vertical
             at(x: x, y: y-1)!,
             at(x: x, y: y+1)!,
-        ]
-    }
-    
-    func _horizontalNeighboursOfX(_ x: Int, y: Int) -> NSArray {
-        [
+        ] + [ // Horizontal
             at(x: x-1, y: y)!,
             at(x: x+1, y: y)!,
-        ]
-    }
-    
-    func _diagonalNeighboursOfX(_ x: Int, y: Int) -> NSArray {
-        [
+        ] + [ // Diagonal
             at(x: x-1, y: y-1)!,
             at(x: x-1, y: y+1)!,
             at(x: x+1, y: y-1)!,
             at(x: x+1, y: y+1)!,
-        ]
+        ] as! [Cell]
     }
 }

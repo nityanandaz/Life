@@ -35,15 +35,6 @@
     return [self atX:x y:y put:[[self atX:x y:y] performSelector:aSelector]];
 }
 
--neighboursOfX:(NSInteger)x y:(NSInteger)y
-{
-    return [[[self _verticalNeighboursOfX:x y:y]
-             arrayByAddingObjectsFromArray:
-             [self _horizontalNeighboursOfX:x y:y]]
-            arrayByAddingObjectsFromArray:
-            [self _diagonalNeighboursOfX:x y:y]];
-}
-
 -tick
 {
     return [self visit:[[TickVisitor alloc] init]];

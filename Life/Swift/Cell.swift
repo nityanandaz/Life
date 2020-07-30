@@ -28,10 +28,8 @@ class Cell: NSObject {
         fatalError()
     }
     
-    func neighbours(onGrid grid: Any!, atX x: Int, y: Int) -> Int {
-        let grid = grid as! Grid
-        let neighbours = grid.neighboursOf(x: x, y: y) as! [Cell]
-        return neighbours
+    func neighbours(onGrid grid: Grid, atX x: Int, y: Int) -> Int {
+        grid.neighboursOf(x: x, y: y)
             .map(\.population)
             .reduce(0, +)
     }
