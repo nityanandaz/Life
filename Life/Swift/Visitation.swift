@@ -45,6 +45,6 @@ extension Visitation {
     
     func visitedGrid() -> Grid {
         return Grid(sideLength: dimension,
-                    dwellers: allVisited as! [Any])
+                    dwellers: allVisited as! [NSObject])
     }
 }

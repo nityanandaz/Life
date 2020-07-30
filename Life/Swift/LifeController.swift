@@ -28,7 +28,7 @@ final class LifeController: NSObject {
         
         grid = grid.at(x: cellX,
                        y: cellY,
-                       perform: NSSelectorFromString("changePopulation")) as! Grid
+                       perform: NSSelectorFromString("changePopulation"))
         _ = gridView.drawGrid(grid)
         
         return self
