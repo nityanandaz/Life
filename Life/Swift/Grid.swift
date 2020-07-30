@@ -48,13 +48,13 @@ extension Grid {
 extension Grid {
     func at(x: Int, y: Int, put object: NSObject) -> Grid {
         var array = self.array!
-        array[self._indexForX(x, y: y)] = object
+        array[self.indexFor(x: x, y: y)] = object
         return Grid(sideLength: n, dwellers: array)
     }
     
     func at(x: Int, y: Int) -> NSObject? {
         let array = self.array as! [NSObject]
-        let result = array[self._indexForX(x, y: y)]
+        let result = array[self.indexFor(x: x, y: y)]
         return result.isKind(of: EmptyCell.self)
             ? nil
             : result

@@ -8,9 +8,22 @@
 
 import Foundation
 
-@objc
-extension Grid {
-    func _indexForX(_ x: Int, y: Int) -> Int {
+class Grid: NSObject {
+    var n: Int!
+    var array: [Any]!
+    
+    init(sideLength: Int) {
+        super.init()
+        _ = self._configureWithSideLength(sideLength)
+    }
+    
+    init(sideLength: Int, dwellers: [Any]) {
+        super.init()
+        _ = self._configureWithSideLength(sideLength, dwellers: dwellers)
+    }
+    
+    func indexFor(x: Int, y: Int) -> Int {
+        let n: Int = self.n
         let index = ((x+n)%n)*n + ((y+n)%n)
         
         assert(index >= 0)
@@ -18,7 +31,9 @@ extension Grid {
         
         return index
     }
-    
+}
+
+private extension Grid {
     func _configureWithSideLength(_ length: Int) -> Grid {
         assert(length > 0)
         
