@@ -7,16 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3D38D93224D2B43000B41856 /* Grid+Neighbours.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D38D93124D2B43000B41856 /* Grid+Neighbours.swift */; };
 		3D38D93424D2B71000B41856 /* Grid+Guts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D38D93324D2B71000B41856 /* Grid+Guts.swift */; };
 		3D38D93824D2E43C00B41856 /* DrawingVisitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D38D93724D2E43C00B41856 /* DrawingVisitor.swift */; };
+		3D38D93A24D309E500B41856 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D38D93924D309E500B41856 /* Grid.swift */; };
 		3D7BA30A2497FDD700264AFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D7BA3092497FDD700264AFE /* Assets.xcassets */; };
 		3D7BA30D2497FDD700264AFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D7BA30B2497FDD700264AFE /* Main.storyboard */; };
 		3D7BA3102497FDD700264AFE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7BA30F2497FDD700264AFE /* main.m */; };
 		3D7BA31B2497FDD700264AFE /* LifeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7BA31A2497FDD700264AFE /* LifeTests.m */; };
 		3D7BA3262497FDD700264AFE /* LifeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7BA3252497FDD700264AFE /* LifeUITests.m */; };
 		3D7BA3672497FF0500264AFE /* Grid.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7BA35E2497FF0500264AFE /* Grid.m */; };
-		3DA3127124D178BD00134C42 /* NSNumber+Times.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA3127024D178BD00134C42 /* NSNumber+Times.swift */; };
 		3DA3127324D1815B00134C42 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA3127224D1815B00134C42 /* ViewController.swift */; };
 		3DA3127524D1825100134C42 /* LifeAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA3127424D1825100134C42 /* LifeAppDelegate.swift */; };
 		3DA3127724D18BF100134C42 /* LifeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA3127624D18BF100134C42 /* LifeController.swift */; };
@@ -46,9 +45,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3D38D93124D2B43000B41856 /* Grid+Neighbours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Grid+Neighbours.swift"; sourceTree = "<group>"; };
 		3D38D93324D2B71000B41856 /* Grid+Guts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Grid+Guts.swift"; sourceTree = "<group>"; };
 		3D38D93724D2E43C00B41856 /* DrawingVisitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingVisitor.swift; sourceTree = "<group>"; };
+		3D38D93924D309E500B41856 /* Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
 		3D7BA3002497FDD600264AFE /* Life.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Life.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D7BA3092497FDD700264AFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D7BA30C2497FDD700264AFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -63,7 +62,6 @@
 		3D7BA3272497FDD700264AFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D7BA3532497FF0500264AFE /* Grid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Grid.h; path = Life/Group/Grid.h; sourceTree = SOURCE_ROOT; };
 		3D7BA35E2497FF0500264AFE /* Grid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Grid.m; path = Life/Group/Grid.m; sourceTree = SOURCE_ROOT; };
-		3DA3127024D178BD00134C42 /* NSNumber+Times.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSNumber+Times.swift"; sourceTree = "<group>"; };
 		3DA3127224D1815B00134C42 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3DA3127424D1825100134C42 /* LifeAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeAppDelegate.swift; sourceTree = "<group>"; };
 		3DA3127624D18BF100134C42 /* LifeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeController.swift; sourceTree = "<group>"; };
@@ -178,13 +176,12 @@
 			isa = PBXGroup;
 			children = (
 				3DA3128124D1B4A000134C42 /* Cell.swift */,
+				3D38D93924D309E500B41856 /* Grid.swift */,
 				3D38D93324D2B71000B41856 /* Grid+Guts.swift */,
-				3D38D93124D2B43000B41856 /* Grid+Neighbours.swift */,
 				3DA3127824D198B900134C42 /* GridView.swift */,
 				3DA3127E24D1ADBA00134C42 /* GridVisitors */,
 				3DA3127424D1825100134C42 /* LifeAppDelegate.swift */,
 				3DA3127624D18BF100134C42 /* LifeController.swift */,
-				3DA3127024D178BD00134C42 /* NSNumber+Times.swift */,
 				3DA3127224D1815B00134C42 /* ViewController.swift */,
 				3DA3127F24D1ADF500134C42 /* Visitation.swift */,
 			);
@@ -327,11 +324,10 @@
 				3D38D93424D2B71000B41856 /* Grid+Guts.swift in Sources */,
 				3DA3127324D1815B00134C42 /* ViewController.swift in Sources */,
 				3DA3127924D198B900134C42 /* GridView.swift in Sources */,
-				3DA3127124D178BD00134C42 /* NSNumber+Times.swift in Sources */,
-				3D38D93224D2B43000B41856 /* Grid+Neighbours.swift in Sources */,
 				3DA3128224D1B4A000134C42 /* Cell.swift in Sources */,
 				3DA3128024D1ADF500134C42 /* Visitation.swift in Sources */,
 				3DA3127B24D1A9A500134C42 /* PopulateVisitor.swift in Sources */,
+				3D38D93A24D309E500B41856 /* Grid.swift in Sources */,
 				3DA3127D24D1AB7900134C42 /* TickVisitor.swift in Sources */,
 				3DC5BA26249C017E00F3B86A /* GridVisitor.swift in Sources */,
 				3DA3127724D18BF100134C42 /* LifeController.swift in Sources */,

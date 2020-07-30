@@ -10,8 +10,6 @@
 -atX:(NSInteger)x y:(NSInteger)y put:object;
 -atX:(NSInteger)x y:(NSInteger)y;
 -atX:(NSInteger)x y:(NSInteger)y perform:(SEL)aSelector;
--tick;
 -fillWith:denizen;
--visit:visitor;
 
 @end

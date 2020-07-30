@@ -35,24 +35,9 @@
     return [self atX:x y:y put:[[self atX:x y:y] performSelector:aSelector]];
 }
 
--tick
-{
-    return [self visit:[[TickVisitor alloc] init]];
-}
-
 -fillWith:denizen
 {
     return [self visit:[[PopulateVisitor alloc] initWithReplacementDenizen:denizen]];
-}
-
--visit:visitor
-{
-    id visitation = [[Visitation alloc] initWithGrid:self
-                                           dimension:n
-                                             visitor:visitor];
-    [[NSNumber numberWithInteger:n*n] times:visitation
-                                    perform:@selector(visitNext)];
-    return [visitation visitedGrid];
 }
 
 @end

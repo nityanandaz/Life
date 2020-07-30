@@ -1,5 +1,5 @@
 //
-//  Grid+Neighbours.swift
+//  Grid.swift
 //  Life
 //
 //  Created by Nityananda Zbil on 30.07.20.
@@ -8,8 +8,22 @@
 
 import Foundation
 
-@objc
 extension Grid {
+    func tick() -> Any! {
+        self.visit(TickVisitor())
+    }
+    
+    @objc
+    func visit(_ visitor: GridVisitor) -> Grid {
+        let visitazion = Visitation(grid: self,
+                                    dimension: n,
+                                    visitor: visitor)
+        (1...n*n).forEach { (_) in
+            _ = visitazion.visitNext()
+        }
+        return visitazion.visitedGrid()
+    }
+    
     func neighboursOf(x: Int, y: Int) -> [Cell] {
         [ // Vertical
             at(x: x, y: y-1)!,
