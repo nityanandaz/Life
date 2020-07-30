@@ -5,7 +5,7 @@
 @property NSArray *array;
 @property NSInteger n;
 
-+withSideLength:(NSInteger)length;
+-initWithSideLength:(NSInteger)length;
 -initWithSideLength:(NSInteger)length dwellers:anArray;
 -atX:(NSInteger)x y:(NSInteger)y put:object;
 -atX:(NSInteger)x y:(NSInteger)y;

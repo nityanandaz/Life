@@ -16,11 +16,6 @@
     return [[super init] _configureWithSideLength:length dwellers:anArray];
 }
 
-+withSideLength:(NSInteger)length
-{
-    return [[self alloc] initWithSideLength:length];
-}
-
 -atX:(NSInteger)x y:(NSInteger)y put:object
 {
     id localArray = [array mutableCopy];
@@ -67,11 +62,6 @@
     [[NSNumber numberWithInteger:n*n] times:visitation
                                     perform:@selector(visitNext)];
     return [visitation visitedGrid];
-}
-
--copyWithZone:(NSZone *)zone
-{
-    return [[Grid allocWithZone:zone] initWithSideLength:n dwellers:array];
 }
 
 @end
