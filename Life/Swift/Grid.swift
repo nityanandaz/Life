@@ -9,6 +9,11 @@
 import Foundation
 
 extension Grid {
+    func fill(with denizen: Cell) -> Grid {
+        self.visit(PopulateVisitor(
+                    replacementDenizen: denizen))
+    }
+    
     func tick() -> Any! {
         self.visit(TickVisitor())
     }

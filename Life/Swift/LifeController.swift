@@ -16,7 +16,7 @@ final class LifeController: NSObject {
     
     init(gridView: GridView) {
         self.grid = Grid(sideLength: Self.gridSize)
-            .fill(with: Cell.deadCell) as! Grid
+            .fill(with: Cell.deadCell)
         self.gridView = gridView
         
         _ = self.gridView.drawGrid(grid)

@@ -35,9 +35,4 @@
     return [self atX:x y:y put:[[self atX:x y:y] performSelector:aSelector]];
 }
 
--fillWith:denizen
-{
-    return [self visit:[[PopulateVisitor alloc] initWithReplacementDenizen:denizen]];
-}
-
 @end

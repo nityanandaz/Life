@@ -10,6 +10,5 @@
 -atX:(NSInteger)x y:(NSInteger)y put:object;
 -atX:(NSInteger)x y:(NSInteger)y;
 -atX:(NSInteger)x y:(NSInteger)y perform:(SEL)aSelector;
--fillWith:denizen;
 
 @end

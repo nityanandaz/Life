@@ -9,10 +9,9 @@
 import Foundation
 
 class PopulateVisitor: NSObject {
-    var replacementDenizen: Any!
+    var replacementDenizen: Cell
     
-    @objc
-    init(replacementDenizen: Any!) {
+    init(replacementDenizen: Cell) {
         self.replacementDenizen = replacementDenizen
     }
 }
