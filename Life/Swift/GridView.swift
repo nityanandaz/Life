@@ -8,13 +8,12 @@
 
 import Cocoa
 
-class GridView: NSView {
+final class GridView: NSView {
 
     var currentGrid: Grid!
     var lifeController: LifeController!
     
-    @objc
-    func drawGrid(_ grid: Grid) -> Self {
+    func drawGrid(_ grid: Grid) -> GridView {
         currentGrid = grid
         needsDisplay = true
         return self
@@ -29,7 +28,7 @@ class GridView: NSView {
         let boundsSize = bounds.size
         let fractionX = location.x / boundsSize.width
         let fractionY = location.y / boundsSize.height
-        _ = lifeController.changeCellAtRelativeX(Float(fractionX),
-                                                 y: Float(fractionY))
+        _ = lifeController.changeCellAtRelative(x: Float(fractionX),
+                                                y: Float(fractionY))
     }
 }

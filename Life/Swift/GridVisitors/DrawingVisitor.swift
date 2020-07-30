@@ -17,11 +17,11 @@ class DrawingVisitor: NSObject {
 }
 
 extension DrawingVisitor: GridVisitor {
-    func visitDenizen(_ denizen: Any!,
+    func visitDenizen(_ denizen: NSObject?,
                       onGrid grid: Grid,
                       ofDimension n: Int,
                       atX x: Int,
-                      y: Int) -> Any! {
+                      y: Int) -> NSObject {
         let denizen = denizen as! Cell
         let (n, x, y) = (CGFloat(n), CGFloat(x), CGFloat(y))
         

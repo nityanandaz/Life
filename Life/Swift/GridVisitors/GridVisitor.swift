@@ -8,10 +8,10 @@
 
 import Foundation
 
-@objc protocol GridVisitor: NSObjectProtocol {
-    func visitDenizen(_ denizen: Any!,
+protocol GridVisitor: AnyObject {
+    func visitDenizen(_ denizen: NSObject?,
                       onGrid grid: Grid,
                       ofDimension n: Int,
                       atX x: Int,
-                      y: Int) -> Any!
+                      y: Int) -> NSObject
 }

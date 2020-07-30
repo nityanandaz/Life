@@ -22,7 +22,7 @@ final class LifeController: NSObject {
         _ = self.gridView.drawGrid(grid)
     }
     
-    func changeCellAtRelativeX(_ fractionX: Float, y fractionY: Float) -> Self {
+    func changeCellAtRelative(x fractionX: Float, y fractionY: Float) -> Self {
         let cellX = Int(fractionX * Float(Self.gridSize))
         let cellY = Int(fractionY * Float(Self.gridSize))
         

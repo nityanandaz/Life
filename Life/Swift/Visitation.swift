@@ -8,28 +8,24 @@
 
 import Foundation
 
-class Visitation: NSObject {
-    var allVisited: NSMutableArray
+final class Visitation: NSObject {
+    var allVisited: [NSObject]
     var grid: Grid
     var visitor: GridVisitor
     
     var cursor: Int
     var dimension: Int
     
-    @objc
     init(grid: Grid, dimension: Int, visitor: GridVisitor) {
-        self.allVisited = NSMutableArray()
+        self.allVisited = []
         self.grid = grid
         self.visitor = visitor
         
         self.cursor = 0
         self.dimension = dimension
     }
-}
-
-@objc
-extension Visitation {
-    func visitNext() -> Any! {
+    
+    func visitNext() -> NSObject {
         let x = cursor / dimension
         let y = cursor % dimension
         cursor += 1
@@ -39,12 +35,12 @@ extension Visitation {
             ofDimension: dimension,
             atX: x,
             y: y)
-        allVisited.add(visited!)
+        allVisited.append(visited)
         return visited
     }
     
     func visitedGrid() -> Grid {
         return Grid(sideLength: dimension,
-                    dwellers: allVisited as! [NSObject])
+                    dwellers: allVisited)
     }
 }
