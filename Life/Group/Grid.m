@@ -61,9 +61,9 @@
 
 -visit:visitor
 {
-    id visitation = [Visitation visitationOnGrid:self
-                                     ofDimension:n
-                                       byVisitor:visitor];
+    id visitation = [[Visitation alloc] initWithGrid:self
+                                           dimension:n
+                                             visitor:visitor];
     [[NSNumber numberWithInteger:n*n] times:visitation
                                     perform:@selector(visitNext)];
     return [visitation visitedGrid];
