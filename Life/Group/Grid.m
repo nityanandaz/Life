@@ -73,39 +73,13 @@
     return [self atX:x y:y put:[[self atX:x y:y] performSelector:aSelector]];
 }
 
--verticalNeighboursOfX:(NSInteger)x y:(NSInteger)y
-{
-    return [NSArray arrayWithObjects:
-            [self atX:x y:y-1],
-            [self atX:x y:y+1],
-            nil];
-}
-
--horizontalNeighboursOfX:(NSInteger)x y:(NSInteger)y
-{
-    return [NSArray arrayWithObjects:
-            [self atX:x-1 y:y],
-            [self atX:x+1 y:y],
-            nil];
-}
-
--diagonalNeighboursOfX:(NSInteger)x y:(NSInteger)y
-{
-    return [NSArray arrayWithObjects:
-            [self atX:x-1 y:y-1],
-            [self atX:x-1 y:y+1],
-            [self atX:x+1 y:y-1],
-            [self atX:x+1 y:y+1],
-            nil];
-}
-
 -neighboursOfX:(NSInteger)x y:(NSInteger)y
 {
-    return [[[self verticalNeighboursOfX:x y:y]
+    return [[[self _verticalNeighboursOfX:x y:y]
              arrayByAddingObjectsFromArray:
-             [self horizontalNeighboursOfX:x y:y]]
+             [self _horizontalNeighboursOfX:x y:y]]
             arrayByAddingObjectsFromArray:
-            [self diagonalNeighboursOfX:x y:y]];
+            [self _diagonalNeighboursOfX:x y:y]];
 }
 
 -tick
