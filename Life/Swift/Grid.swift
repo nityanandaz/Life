@@ -18,7 +18,6 @@ extension Grid {
         self.visit(TickVisitor())
     }
     
-    @objc
     func visit(_ visitor: GridVisitor) -> Grid {
         let visitazion = Visitation(grid: self,
                                     dimension: n,
@@ -42,5 +41,29 @@ extension Grid {
             at(x: x+1, y: y-1)!,
             at(x: x+1, y: y+1)!,
         ] as! [Cell]
+    }
+}
+
+@objc
+extension Grid {
+    func at(x: Int, y: Int, put object: NSObject) -> Grid {
+        var array = self.array!
+        array[self._indexForX(x, y: y)] = object
+        return Grid(sideLength: n, dwellers: array)
+    }
+    
+    func at(x: Int, y: Int) -> NSObject? {
+        let array = self.array as! [NSObject]
+        let result = array[self._indexForX(x, y: y)]
+        return result.isKind(of: EmptyCell.self)
+            ? nil
+            : result
+    }
+    
+    func at(x: Int, y: Int, perform selector: Selector) -> Any! {
+        let object = at(x: x, y: y)?
+            .perform(selector)?
+            .takeUnretainedValue() as! Cell
+        return at(x: x, y: y, put: object)
     }
 }
