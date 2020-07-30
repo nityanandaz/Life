@@ -8,15 +8,14 @@
 
 import Foundation
 
-@objc
-protocol Tickable: NSObjectProtocol {
-    func tick(onGrid: Any!, atX x: Int, y: Int) -> Any!
+protocol Tickable: AnyObject {
+    func tick(onGrid: Grid, atX x: Int, y: Int) -> Tickable
 }
 
 class EmptyCell: NSObject {}
 
 extension EmptyCell: Tickable {
-    func tick(onGrid: Any!, atX x: Int, y: Int) -> Any! {
+    func tick(onGrid: Grid, atX x: Int, y: Int) -> Tickable {
         return self
     }
 }
@@ -25,25 +24,14 @@ class Cell: NSObject {
     static let livingCell = LivingCell()
     static let deadCell = DeadCell()
     
-    static func living() -> Any! {
-        livingCell
-    }
-    
-    static func dead() -> Any! {
-        deadCell
-    }
-    
     func neighbours(onGrid grid: Any!, atX x: Int, y: Int) -> Int! {
         let grid = grid as! Grid
         let neighbours = grid.neighboursOf(x: x, y: y) as! NSArray // NSMutableArray?
         return neighbours
             .value(forKeyPath: "@sum.population") as? Int
     }
-}
-
-@objc
-extension Cell {
-    func potentialStates() -> NSArray {
+    
+    func potentialStates() -> [Cell] {
         fatalError()
     }
     
@@ -53,15 +41,14 @@ extension Cell {
 }
 
 extension Cell: Tickable {
-    func tick(onGrid grid: Any!, atX x: Int, y: Int) -> Any! {
-        potentialStates().object(
-            at: neighbours(onGrid: grid, atX: x, y: y))
+    func tick(onGrid grid: Grid, atX x: Int, y: Int) -> Tickable {
+        potentialStates()[neighbours(onGrid: grid, atX: x, y: y)]
     }
 }
 
 
 class LivingCell: Cell {
-    static let nextStatesFromLiving = NSArray(array: [
+    static let nextStatesFromLiving = [
         deadCell,
         deadCell,
         livingCell,
@@ -71,26 +58,25 @@ class LivingCell: Cell {
         deadCell,
         deadCell,
         deadCell,
-    ])
-}
-
-@objc
-extension LivingCell {
-    override func potentialStates() -> NSArray {
+    ]
+    
+    override func potentialStates() -> [Cell] {
         Self.nextStatesFromLiving
     }
     
+    @objc
     override func population() -> Int {
         1
     }
     
-    func changePopulation() -> Any! {
-        Self.dead()
+    @objc
+    func changePopulation() -> Cell {
+        Self.deadCell
     }
 }
 
 class DeadCell: Cell {
-    static let nextStatesFromDead = NSArray(array: [
+    static let nextStatesFromDead = [
         deadCell,
         deadCell,
         deadCell,
@@ -100,20 +86,19 @@ class DeadCell: Cell {
         deadCell,
         deadCell,
         deadCell,
-    ])
-}
-
-@objc
-extension DeadCell {
-    override func potentialStates() -> NSArray {
+    ]
+    
+    override func potentialStates() -> [Cell] {
         Self.nextStatesFromDead
     }
     
+    @objc
     override func population() -> Int {
         0
     }
     
-    func changePopulation() -> Any! {
-        Self.living()
+    @objc
+    func changePopulation() -> Cell {
+        Self.livingCell
     }
 }
