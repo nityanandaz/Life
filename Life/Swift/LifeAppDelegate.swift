@@ -13,15 +13,15 @@ class LifeAppDelegate: NSObject, NSApplicationDelegate {
     var timer: Timer!
     
     func applicationDidFinishLaunching(_ notification: Notification) {
-        lifeController = LifeController()
-        let gridView = NSApplication.shared
-            .mainWindow?
-            .contentViewController?
-            .view as? GridView
+        guard let gridView = NSApplication.shared
+                .mainWindow?
+                .contentViewController?
+                .view as? GridView else {
+            fatalError()
+        }
         
-        gridView?.lifeController = lifeController
-        lifeController.gridView = gridView
-        lifeController.awakeFromNib()
+        lifeController = LifeController(gridView: gridView)
+        gridView.lifeController = lifeController
     }
 }
 
@@ -31,6 +31,7 @@ extension LifeAppDelegate {
     }
     
     @IBAction func runTimer(_ sender: Any) {
+        timer?.invalidate()
         timer = Timer.scheduledTimer(timeInterval: 0.1,
                                      target: lifeController!,
                                      selector: #selector(tick(_:)),

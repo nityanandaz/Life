@@ -11,13 +11,15 @@ import Foundation
 class LifeController: NSObject {
     private static let gridSize: NSInteger = 15
     
-    var grid: Grid!
-    var gridView: GridView!
+    var grid: Grid
+    var gridView: GridView
     
-    override func awakeFromNib() {
-        grid = (Grid.withSideLength(Self.gridSize) as? Grid)?
-            .fill(with: Cell.dead()) as? Grid
-        gridView.drawGrid(grid)
+    init(gridView: GridView) {
+        self.grid = (Grid.withSideLength(Self.gridSize) as? Grid)?
+            .fill(with: Cell.dead()) as! Grid
+        self.gridView = gridView
+        
+        _ = self.gridView.drawGrid(grid)
     }
     
     @objc
@@ -27,8 +29,8 @@ class LifeController: NSObject {
         
         grid = grid.at(x: cellX,
                        y: cellY,
-                       perform: NSSelectorFromString("changePopulation")) as? Grid
-        gridView.drawGrid(grid)
+                       perform: NSSelectorFromString("changePopulation")) as! Grid
+        _ = gridView.drawGrid(grid)
         
         return self
     }
@@ -36,7 +38,7 @@ class LifeController: NSObject {
 
 extension LifeController {
     @IBAction func tick(_ sender: Any) {
-        grid = grid.tick() as? Grid
-        gridView.drawGrid(grid)
+        grid = grid.tick() as! Grid
+        _ = gridView.drawGrid(grid)
     }
 }
