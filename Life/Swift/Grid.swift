@@ -8,18 +8,18 @@
 
 import Foundation
 
-class Grid: NSObject {
+final class Grid: NSObject {
     var n: Int!
     var array: [Any]!
     
-    init(sideLength: Int) {
-        super.init()
-        _ = self._configureWithSideLength(sideLength)
-    }
-    
     init(sideLength: Int, dwellers: [Any]) {
+        assert(sideLength > 0)
+        assert(dwellers.count == sideLength*sideLength)
+        
+        self.n = sideLength
+        self.array = dwellers
+        
         super.init()
-        _ = self._configureWithSideLength(sideLength, dwellers: dwellers)
     }
     
     func indexFor(x: Int, y: Int) -> Int {
@@ -32,6 +32,20 @@ class Grid: NSObject {
         return index
     }
     
+}
+
+extension Grid {
+    convenience init(sideLength: Int) {
+        assert(sideLength > 0)
+        
+        let empty = EmptyCell()
+        let dwellers = Array(repeating: empty,
+                             count: sideLength*sideLength)
+        self.init(sideLength: sideLength, dwellers: dwellers)
+    }
+}
+
+extension Grid {
     func fill(with denizen: Cell) -> Grid {
         self.visit(PopulateVisitor(
                     replacementDenizen: denizen))
@@ -86,27 +100,5 @@ class Grid: NSObject {
         var array = self.array!
         array[self.indexFor(x: x, y: y)] = object
         return Grid(sideLength: n, dwellers: array)
-    }
-}
-
-private extension Grid {
-    func _configureWithSideLength(_ length: Int) -> Grid {
-        assert(length > 0)
-        
-        let empty = EmptyCell()
-        let dwellers = Array(repeating: empty,
-                             count: length*length)
-        
-        return _configureWithSideLength(length, dwellers: dwellers)
-    }
-    
-    func _configureWithSideLength(_ length: Int, dwellers: [Any]) -> Grid {
-        assert(length > 0)
-        assert(dwellers.count == length*length)
-        
-        self.n = length
-        self.array = dwellers
-        
-        return self
     }
 }
