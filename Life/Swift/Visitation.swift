@@ -9,7 +9,7 @@
 import Foundation
 
 final class Visitation {
-    var allVisited: [Cell?]
+    var allVisited: [CellProtocol?]
     var grid: Grid
     var visitor: GridVisitor
     
@@ -25,7 +25,7 @@ final class Visitation {
         self.dimension = dimension
     }
     
-    func visitNext() -> Cell? {
+    func visitNext() -> CellProtocol? {
         let x = cursor / dimension
         let y = cursor % dimension
         cursor += 1

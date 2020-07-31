@@ -11,11 +11,11 @@ import Foundation
 final class TickVisitor {}
 
 extension TickVisitor: GridVisitor {
-    func visitDenizen(_ denizen: Cell?,
+    func visitDenizen(_ denizen: CellProtocol?,
                       onGrid grid: Grid,
                       ofDimension n: Int,
                       atX x: Int,
-                      y: Int) -> Cell? {
-        denizen?.tick(onGrid: grid, atX: x, y: y)
+                      y: Int) -> CellProtocol? {
+        denizen?.tickOn(grid: grid, atX: x, y: y)
     }
 }

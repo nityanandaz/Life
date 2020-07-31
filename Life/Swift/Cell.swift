@@ -8,38 +8,36 @@
 
 import Foundation
 
+// MARK: - Cell
 class Cell {
     static let livingCell = LivingCell()
     static let deadCell = DeadCell()
-    
-    var population: Int {
-        fatalError()
-    }
     
     func neighbours(onGrid grid: Grid, atX x: Int, y: Int) -> Int {
         grid.neighboursOf(x: x, y: y)
             .map(\.population)
             .reduce(0, +)
     }
+}
+
+// MARK: - CellProtocol
+protocol CellProtocol: AnyObject {
+    var population: Int { get }
+    var potentialStates: [CellProtocol] { get }
     
-    func potentialStates() -> [Cell] {
-        fatalError()
-    }
-    
-    func changePopulation() -> Cell {
-        fatalError()
+    func changePopulation() -> CellProtocol
+    func tickOn(grid: Grid, atX x: Int, y: Int) -> CellProtocol
+}
+
+extension CellProtocol where Self: Cell {
+    func tickOn(grid: Grid, atX x: Int, y: Int) -> CellProtocol {
+        potentialStates[neighbours(onGrid: grid, atX: x, y: y)]
     }
 }
 
-extension Cell {
-    func tick(onGrid grid: Grid, atX x: Int, y: Int) -> Cell {
-        potentialStates()[neighbours(onGrid: grid, atX: x, y: y)]
-    }
-}
-
-
-class LivingCell: Cell {
-    static let nextStatesFromLiving = [
+// MARK: - LivingCell
+final class LivingCell: Cell, CellProtocol {
+    static let nextStatesFromLiving: [CellProtocol] = [
         deadCell,
         deadCell,
         livingCell,
@@ -51,19 +49,20 @@ class LivingCell: Cell {
         deadCell,
     ]
     
-    override var population: Int { 1 }
+    var population: Int { 1 }
     
-    override func potentialStates() -> [Cell] {
+    var potentialStates: [CellProtocol] {
         Self.nextStatesFromLiving
     }
     
-    override func changePopulation() -> Cell {
+    func changePopulation() -> CellProtocol {
         Self.deadCell
     }
 }
 
-class DeadCell: Cell {
-    static let nextStatesFromDead = [
+// MARK: - DeadCell
+final class DeadCell: Cell, CellProtocol {
+    static let nextStatesFromDead: [CellProtocol] = [
         deadCell,
         deadCell,
         deadCell,
@@ -75,13 +74,13 @@ class DeadCell: Cell {
         deadCell,
     ]
     
-    override var population: Int { 0 }
+    var population: Int { 0 }
     
-    override func potentialStates() -> [Cell] {
+    var potentialStates: [CellProtocol] {
         Self.nextStatesFromDead
     }
     
-    override func changePopulation() -> Cell {
+    func changePopulation() -> CellProtocol {
         Self.livingCell
     }
 }
