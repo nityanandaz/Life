@@ -67,20 +67,20 @@ extension Grid {
     func neighboursOf(x: Int, y: Int) -> [Cell] {
         [
             // Vertical
-            at(x: x, y: y-1)!,
-            at(x: x, y: y+1)!,
+            at(x: x, y: y-1),
+            at(x: x, y: y+1),
             // Horizontal
-            at(x: x-1, y: y)!,
-            at(x: x+1, y: y)!,
+            at(x: x-1, y: y),
+            at(x: x+1, y: y),
             // Diagonal
-            at(x: x-1, y: y-1)!,
-            at(x: x-1, y: y+1)!,
-            at(x: x+1, y: y-1)!,
-            at(x: x+1, y: y+1)!,
-        ] as! [Cell]
+            at(x: x-1, y: y-1),
+            at(x: x-1, y: y+1),
+            at(x: x+1, y: y-1),
+            at(x: x+1, y: y+1),
+        ].compactMap({ $0 })
     }
     
-    func at(x: Int, y: Int) -> NSObject? {
+    func at(x: Int, y: Int) -> Cell? {
         array[self.indexFor(x: x, y: y)]
     }
     
