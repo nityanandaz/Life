@@ -12,14 +12,6 @@ protocol Tickable: AnyObject {
     func tick(onGrid: Grid, atX x: Int, y: Int) -> Tickable
 }
 
-class EmptyCell: NSObject {}
-
-extension EmptyCell: Tickable {
-    func tick(onGrid: Grid, atX x: Int, y: Int) -> Tickable {
-        return self
-    }
-}
-
 class Cell: NSObject {
     static let livingCell = LivingCell()
     static let deadCell = DeadCell()

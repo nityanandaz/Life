@@ -10,9 +10,9 @@ import Foundation
 
 final class Grid: NSObject {
     var n: Int
-    var array: [NSObject]
+    var array: [Cell?]
     
-    init(sideLength: Int, dwellers: [NSObject]) {
+    init(sideLength: Int, dwellers: [Cell?]) {
         assert(sideLength > 0)
         assert(dwellers.count == sideLength*sideLength)
         
@@ -38,8 +38,7 @@ extension Grid {
     convenience init(sideLength: Int) {
         assert(sideLength > 0)
         
-        let empty = EmptyCell()
-        let dwellers = Array(repeating: empty,
+        let dwellers = Array<Cell?>(repeating: nil,
                              count: sideLength*sideLength)
         self.init(sideLength: sideLength, dwellers: dwellers)
     }
@@ -82,10 +81,7 @@ extension Grid {
     }
     
     func at(x: Int, y: Int) -> NSObject? {
-        let result = array[self.indexFor(x: x, y: y)]
-        return result.isKind(of: EmptyCell.self)
-            ? nil
-            : result
+        array[self.indexFor(x: x, y: y)]
     }
     
     func at(x: Int, y: Int, perform selector: Selector) -> Grid {
@@ -95,7 +91,7 @@ extension Grid {
         return at(x: x, y: y, put: object)
     }
     
-    private func at(x: Int, y: Int, put object: NSObject) -> Grid {
+    private func at(x: Int, y: Int, put object: Cell?) -> Grid {
         array[self.indexFor(x: x, y: y)] = object
         return Grid(sideLength: n, dwellers: array)
     }
