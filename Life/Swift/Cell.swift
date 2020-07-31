@@ -8,10 +8,6 @@
 
 import Foundation
 
-protocol Tickable: AnyObject {
-    func tick(onGrid: Grid, atX x: Int, y: Int) -> Tickable
-}
-
 class Cell {
     static let livingCell = LivingCell()
     static let deadCell = DeadCell()
@@ -35,8 +31,8 @@ class Cell {
     }
 }
 
-extension Cell: Tickable {
-    func tick(onGrid grid: Grid, atX x: Int, y: Int) -> Tickable {
+extension Cell {
+    func tick(onGrid grid: Grid, atX x: Int, y: Int) -> Cell {
         potentialStates()[neighbours(onGrid: grid, atX: x, y: y)]
     }
 }

@@ -16,7 +16,6 @@ extension TickVisitor: GridVisitor {
                       ofDimension n: Int,
                       atX x: Int,
                       y: Int) -> Cell? {
-        return denizen?
-            .tick(onGrid: grid, atX: x, y: y) as? Cell
+        denizen?.tick(onGrid: grid, atX: x, y: y)
     }
 }
