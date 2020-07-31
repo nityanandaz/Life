@@ -7,19 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3D7BA3082497FDD600264AFE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7BA3072497FDD600264AFE /* ViewController.m */; };
+		3D38D93824D2E43C00B41856 /* DrawingVisitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D38D93724D2E43C00B41856 /* DrawingVisitor.swift */; };
+		3D38D93A24D309E500B41856 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D38D93924D309E500B41856 /* Grid.swift */; };
 		3D7BA30A2497FDD700264AFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D7BA3092497FDD700264AFE /* Assets.xcassets */; };
 		3D7BA30D2497FDD700264AFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D7BA30B2497FDD700264AFE /* Main.storyboard */; };
 		3D7BA3102497FDD700264AFE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7BA30F2497FDD700264AFE /* main.m */; };
 		3D7BA31B2497FDD700264AFE /* LifeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7BA31A2497FDD700264AFE /* LifeTests.m */; };
 		3D7BA3262497FDD700264AFE /* LifeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7BA3252497FDD700264AFE /* LifeUITests.m */; };
-		3D7BA3612497FF0500264AFE /* LifeAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7BA3522497FF0500264AFE /* LifeAppDelegate.m */; };
-		3D7BA3622497FF0500264AFE /* GridVisitors.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7BA3552497FF0500264AFE /* GridVisitors.m */; };
-		3D7BA3632497FF0500264AFE /* LifeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7BA3572497FF0500264AFE /* LifeController.m */; };
-		3D7BA3652497FF0500264AFE /* GridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7BA35A2497FF0500264AFE /* GridView.m */; };
-		3D7BA3662497FF0500264AFE /* Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7BA35D2497FF0500264AFE /* Cell.m */; };
-		3D7BA3672497FF0500264AFE /* Grid.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7BA35E2497FF0500264AFE /* Grid.m */; };
-		3D7BA3682497FF0500264AFE /* NSNumber+Times.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7BA35F2497FF0500264AFE /* NSNumber+Times.m */; };
+		3DA3127324D1815B00134C42 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA3127224D1815B00134C42 /* ViewController.swift */; };
+		3DA3127524D1825100134C42 /* LifeAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA3127424D1825100134C42 /* LifeAppDelegate.swift */; };
+		3DA3127724D18BF100134C42 /* LifeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA3127624D18BF100134C42 /* LifeController.swift */; };
+		3DA3127924D198B900134C42 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA3127824D198B900134C42 /* GridView.swift */; };
+		3DA3127B24D1A9A500134C42 /* PopulateVisitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA3127A24D1A9A500134C42 /* PopulateVisitor.swift */; };
+		3DA3127D24D1AB7900134C42 /* TickVisitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA3127C24D1AB7900134C42 /* TickVisitor.swift */; };
+		3DA3128024D1ADF500134C42 /* Visitation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA3127F24D1ADF500134C42 /* Visitation.swift */; };
+		3DA3128224D1B4A000134C42 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA3128124D1B4A000134C42 /* Cell.swift */; };
+		3DC5BA26249C017E00F3B86A /* GridVisitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC5BA25249C017E00F3B86A /* GridVisitor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,9 +43,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D38D93724D2E43C00B41856 /* DrawingVisitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingVisitor.swift; sourceTree = "<group>"; };
+		3D38D93924D309E500B41856 /* Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
 		3D7BA3002497FDD600264AFE /* Life.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Life.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		3D7BA3062497FDD600264AFE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		3D7BA3072497FDD600264AFE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		3D7BA3092497FDD700264AFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D7BA30C2497FDD700264AFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3D7BA30E2497FDD700264AFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,20 +57,16 @@
 		3D7BA3212497FDD700264AFE /* LifeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LifeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D7BA3252497FDD700264AFE /* LifeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LifeUITests.m; sourceTree = "<group>"; };
 		3D7BA3272497FDD700264AFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3D7BA3512497FF0500264AFE /* LifeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LifeController.h; path = Life/Group/LifeController.h; sourceTree = SOURCE_ROOT; };
-		3D7BA3522497FF0500264AFE /* LifeAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LifeAppDelegate.m; path = Life/Group/LifeAppDelegate.m; sourceTree = SOURCE_ROOT; };
-		3D7BA3532497FF0500264AFE /* Grid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Grid.h; path = Life/Group/Grid.h; sourceTree = SOURCE_ROOT; };
-		3D7BA3542497FF0500264AFE /* LifeAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LifeAppDelegate.h; path = Life/Group/LifeAppDelegate.h; sourceTree = SOURCE_ROOT; };
-		3D7BA3552497FF0500264AFE /* GridVisitors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GridVisitors.m; path = Life/Group/GridVisitors.m; sourceTree = SOURCE_ROOT; };
-		3D7BA3562497FF0500264AFE /* Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Cell.h; path = Life/Group/Cell.h; sourceTree = SOURCE_ROOT; };
-		3D7BA3572497FF0500264AFE /* LifeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LifeController.m; path = Life/Group/LifeController.m; sourceTree = SOURCE_ROOT; };
-		3D7BA35A2497FF0500264AFE /* GridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GridView.m; path = Life/Group/GridView.m; sourceTree = SOURCE_ROOT; };
-		3D7BA35B2497FF0500264AFE /* GridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GridView.h; path = Life/Group/GridView.h; sourceTree = SOURCE_ROOT; };
-		3D7BA35C2497FF0500264AFE /* GridVisitors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GridVisitors.h; path = Life/Group/GridVisitors.h; sourceTree = SOURCE_ROOT; };
-		3D7BA35D2497FF0500264AFE /* Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Cell.m; path = Life/Group/Cell.m; sourceTree = SOURCE_ROOT; };
-		3D7BA35E2497FF0500264AFE /* Grid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Grid.m; path = Life/Group/Grid.m; sourceTree = SOURCE_ROOT; };
-		3D7BA35F2497FF0500264AFE /* NSNumber+Times.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSNumber+Times.m"; path = "Life/Group/NSNumber+Times.m"; sourceTree = SOURCE_ROOT; };
-		3D7BA3602497FF0500264AFE /* NSNumber+Times.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSNumber+Times.h"; path = "Life/Group/NSNumber+Times.h"; sourceTree = SOURCE_ROOT; };
+		3DA3127224D1815B00134C42 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3DA3127424D1825100134C42 /* LifeAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeAppDelegate.swift; sourceTree = "<group>"; };
+		3DA3127624D18BF100134C42 /* LifeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeController.swift; sourceTree = "<group>"; };
+		3DA3127824D198B900134C42 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
+		3DA3127A24D1A9A500134C42 /* PopulateVisitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopulateVisitor.swift; sourceTree = "<group>"; };
+		3DA3127C24D1AB7900134C42 /* TickVisitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickVisitor.swift; sourceTree = "<group>"; };
+		3DA3127F24D1ADF500134C42 /* Visitation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Visitation.swift; sourceTree = "<group>"; };
+		3DA3128124D1B4A000134C42 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
+		3DC5BA24249C017E00F3B86A /* Life-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Life-Bridging-Header.h"; sourceTree = "<group>"; };
+		3DC5BA25249C017E00F3B86A /* GridVisitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridVisitor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,27 +94,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3D28365D249934510067C232 /* Group */ = {
-			isa = PBXGroup;
-			children = (
-				3D7BA3562497FF0500264AFE /* Cell.h */,
-				3D7BA35D2497FF0500264AFE /* Cell.m */,
-				3D7BA3532497FF0500264AFE /* Grid.h */,
-				3D7BA35E2497FF0500264AFE /* Grid.m */,
-				3D7BA35B2497FF0500264AFE /* GridView.h */,
-				3D7BA35A2497FF0500264AFE /* GridView.m */,
-				3D7BA35C2497FF0500264AFE /* GridVisitors.h */,
-				3D7BA3552497FF0500264AFE /* GridVisitors.m */,
-				3D7BA3542497FF0500264AFE /* LifeAppDelegate.h */,
-				3D7BA3522497FF0500264AFE /* LifeAppDelegate.m */,
-				3D7BA3512497FF0500264AFE /* LifeController.h */,
-				3D7BA3572497FF0500264AFE /* LifeController.m */,
-				3D7BA3602497FF0500264AFE /* NSNumber+Times.h */,
-				3D7BA35F2497FF0500264AFE /* NSNumber+Times.m */,
-			);
-			path = Group;
-			sourceTree = "<group>";
-		};
 		3D7BA2F72497FDD600264AFE = {
 			isa = PBXGroup;
 			children = (
@@ -139,14 +117,13 @@
 		3D7BA3022497FDD600264AFE /* Life */ = {
 			isa = PBXGroup;
 			children = (
-				3D28365D249934510067C232 /* Group */,
-				3D7BA3062497FDD600264AFE /* ViewController.h */,
-				3D7BA3072497FDD600264AFE /* ViewController.m */,
+				3DE6C54624A3F0B90023843A /* Swift */,
 				3D7BA3092497FDD700264AFE /* Assets.xcassets */,
 				3D7BA30B2497FDD700264AFE /* Main.storyboard */,
 				3D7BA30E2497FDD700264AFE /* Info.plist */,
 				3D7BA30F2497FDD700264AFE /* main.m */,
 				3D7BA3112497FDD700264AFE /* Life.entitlements */,
+				3DC5BA24249C017E00F3B86A /* Life-Bridging-Header.h */,
 			);
 			path = Life;
 			sourceTree = "<group>";
@@ -167,6 +144,32 @@
 				3D7BA3272497FDD700264AFE /* Info.plist */,
 			);
 			path = LifeUITests;
+			sourceTree = "<group>";
+		};
+		3DA3127E24D1ADBA00134C42 /* GridVisitors */ = {
+			isa = PBXGroup;
+			children = (
+				3D38D93724D2E43C00B41856 /* DrawingVisitor.swift */,
+				3DC5BA25249C017E00F3B86A /* GridVisitor.swift */,
+				3DA3127A24D1A9A500134C42 /* PopulateVisitor.swift */,
+				3DA3127C24D1AB7900134C42 /* TickVisitor.swift */,
+			);
+			path = GridVisitors;
+			sourceTree = "<group>";
+		};
+		3DE6C54624A3F0B90023843A /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				3DA3128124D1B4A000134C42 /* Cell.swift */,
+				3D38D93924D309E500B41856 /* Grid.swift */,
+				3DA3127824D198B900134C42 /* GridView.swift */,
+				3DA3127E24D1ADBA00134C42 /* GridVisitors */,
+				3DA3127424D1825100134C42 /* LifeAppDelegate.swift */,
+				3DA3127624D18BF100134C42 /* LifeController.swift */,
+				3DA3127224D1815B00134C42 /* ViewController.swift */,
+				3DA3127F24D1ADF500134C42 /* Visitation.swift */,
+			);
+			path = Swift;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,11 +234,12 @@
 		3D7BA2F82497FDD600264AFE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1140;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Nityananda Zbil";
 				TargetAttributes = {
 					3D7BA2FF2497FDD600264AFE = {
 						CreatedOnToolsVersion = 11.4;
+						LastSwiftMigration = 1140;
 					};
 					3D7BA3152497FDD700264AFE = {
 						CreatedOnToolsVersion = 11.4;
@@ -298,15 +302,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D7BA3612497FF0500264AFE /* LifeAppDelegate.m in Sources */,
-				3D7BA3082497FDD600264AFE /* ViewController.m in Sources */,
 				3D7BA3102497FDD700264AFE /* main.m in Sources */,
-				3D7BA3672497FF0500264AFE /* Grid.m in Sources */,
-				3D7BA3622497FF0500264AFE /* GridVisitors.m in Sources */,
-				3D7BA3682497FF0500264AFE /* NSNumber+Times.m in Sources */,
-				3D7BA3652497FF0500264AFE /* GridView.m in Sources */,
-				3D7BA3632497FF0500264AFE /* LifeController.m in Sources */,
-				3D7BA3662497FF0500264AFE /* Cell.m in Sources */,
+				3D38D93824D2E43C00B41856 /* DrawingVisitor.swift in Sources */,
+				3DA3127324D1815B00134C42 /* ViewController.swift in Sources */,
+				3DA3127924D198B900134C42 /* GridView.swift in Sources */,
+				3DA3128224D1B4A000134C42 /* Cell.swift in Sources */,
+				3DA3128024D1ADF500134C42 /* Visitation.swift in Sources */,
+				3DA3127B24D1A9A500134C42 /* PopulateVisitor.swift in Sources */,
+				3D38D93A24D309E500B41856 /* Grid.swift in Sources */,
+				3DA3127D24D1AB7900134C42 /* TickVisitor.swift in Sources */,
+				3DC5BA26249C017E00F3B86A /* GridVisitor.swift in Sources */,
+				3DA3127724D18BF100134C42 /* LifeController.swift in Sources */,
+				3DA3127524D1825100134C42 /* LifeAppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,6 +386,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -437,6 +445,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -459,6 +468,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
 			};
 			name = Release;
 		};
@@ -466,6 +476,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Life/Life.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -476,6 +487,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = eu.nityananda.Life;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Life/Life-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -483,6 +497,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Life/Life.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -493,12 +508,15 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = eu.nityananda.Life;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Life/Life-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
 		3D7BA32E2497FDD700264AFE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -518,6 +536,7 @@
 		3D7BA32F2497FDD700264AFE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -537,6 +556,7 @@
 		3D7BA3312497FDD700264AFE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = LifeUITests/Info.plist;
@@ -554,6 +574,7 @@
 		3D7BA3322497FDD700264AFE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = LifeUITests/Info.plist;
