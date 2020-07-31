@@ -8,7 +8,7 @@
 
 import Foundation
 
-final class Visitation: NSObject {
+final class Visitation {
     var allVisited: [Cell?]
     var grid: Grid
     var visitor: GridVisitor

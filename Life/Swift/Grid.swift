@@ -8,7 +8,7 @@
 
 import Foundation
 
-final class Grid: NSObject {
+final class Grid {
     var n: Int
     var array: [Cell?]
     
@@ -18,8 +18,6 @@ final class Grid: NSObject {
         
         self.n = sideLength
         self.array = dwellers
-        
-        super.init()
     }
     
     func indexFor(x: Int, y: Int) -> Int {

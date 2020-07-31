@@ -8,7 +8,7 @@
 
 import Foundation
 
-class PopulateVisitor: NSObject {
+final class PopulateVisitor {
     var replacementDenizen: Cell
     
     init(replacementDenizen: Cell) {

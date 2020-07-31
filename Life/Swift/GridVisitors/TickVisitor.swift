@@ -8,7 +8,7 @@
 
 import Foundation
 
-class TickVisitor: NSObject {}
+final class TickVisitor {}
 
 extension TickVisitor: GridVisitor {
     func visitDenizen(_ denizen: Cell?,

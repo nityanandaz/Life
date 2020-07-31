@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class DrawingVisitor: NSObject {
+final class DrawingVisitor {
     var view: NSView
     
     init(view: NSView) {

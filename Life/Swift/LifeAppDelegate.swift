@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class LifeAppDelegate: NSObject, NSApplicationDelegate {
+final class LifeAppDelegate: NSObject, NSApplicationDelegate {
     var lifeController: LifeController!
     var timer: Timer!
     
