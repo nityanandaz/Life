@@ -12,7 +12,7 @@ protocol Tickable: AnyObject {
     func tick(onGrid: Grid, atX x: Int, y: Int) -> Tickable
 }
 
-class Cell: NSObject {
+class Cell {
     static let livingCell = LivingCell()
     static let deadCell = DeadCell()
     
@@ -27,6 +27,10 @@ class Cell: NSObject {
     }
     
     func potentialStates() -> [Cell] {
+        fatalError()
+    }
+    
+    func changePopulation() -> Cell {
         fatalError()
     }
 }
@@ -57,8 +61,7 @@ class LivingCell: Cell {
         Self.nextStatesFromLiving
     }
     
-    @objc
-    func changePopulation() -> Cell {
+    override func changePopulation() -> Cell {
         Self.deadCell
     }
 }
@@ -82,8 +85,7 @@ class DeadCell: Cell {
         Self.nextStatesFromDead
     }
     
-    @objc
-    func changePopulation() -> Cell {
+    override func changePopulation() -> Cell {
         Self.livingCell
     }
 }

@@ -26,9 +26,9 @@ final class LifeController: NSObject {
         let cellX = Int(fractionX * Float(Self.gridSize))
         let cellY = Int(fractionY * Float(Self.gridSize))
         
-        grid = grid.at(x: cellX,
-                       y: cellY,
-                       perform: NSSelectorFromString("changePopulation"))
+        grid = grid.at(x: cellX, y: cellY, perform: {
+            $0?.changePopulation()
+        })
         _ = gridView.drawGrid(grid)
         
         return self

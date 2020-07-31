@@ -82,11 +82,9 @@ extension Grid {
         array[self.indexFor(x: x, y: y)]
     }
     
-    func at(x: Int, y: Int, perform selector: Selector) -> Grid {
-        let object = at(x: x, y: y)?
-            .perform(selector)?
-            .takeUnretainedValue() as! Cell
-        return at(x: x, y: y, put: object)
+    func at(x: Int, y: Int, perform action: (Cell?) -> Cell?) -> Grid {
+        return at(x: x, y: y, put:
+                    action(at(x: x, y: y)))
     }
     
     private func at(x: Int, y: Int, put object: Cell?) -> Grid {
