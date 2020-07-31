@@ -20,7 +20,7 @@ final class Grid {
         self.array = dwellers
     }
     
-    func indexFor(x: Int, y: Int) -> Int {
+    private func indexFor(x: Int, y: Int) -> Int {
         let n: Int = self.n
         let index = ((x+n)%n)*n + ((y+n)%n)
         
