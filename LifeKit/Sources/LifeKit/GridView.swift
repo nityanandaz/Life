@@ -11,7 +11,7 @@ import Cocoa
 public final class GridView: NSView {
 
     var currentGrid: Grid!
-    var lifeController: LifeController!
+    public var lifeController: LifeController!
     
     func drawGrid(_ grid: Grid) -> GridView {
         currentGrid = grid

@@ -14,7 +14,7 @@ public final class LifeController: NSObject {
     var grid: Grid
     var gridView: GridView
     
-    init(gridView: GridView) {
+    public init(gridView: GridView) {
         self.grid = Grid(sideLength: Self.gridSize)
             .fill(with: Cell.deadCell)
         self.gridView = gridView
@@ -35,7 +35,7 @@ public final class LifeController: NSObject {
     }
 }
 
-extension LifeController {
+public extension LifeController {
     @IBAction func tick(_ sender: Any) {
         grid = grid.tick()
         _ = gridView.drawGrid(grid)
