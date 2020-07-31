@@ -51,7 +51,7 @@ extension Grid {
                     replacementDenizen: denizen))
     }
     
-    func tick() -> Any! {
+    func tick() -> Grid {
         self.visit(TickVisitor())
     }
     

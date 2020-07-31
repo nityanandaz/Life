@@ -37,7 +37,7 @@ final class LifeController: NSObject {
 
 extension LifeController {
     @IBAction func tick(_ sender: Any) {
-        grid = grid.tick() as! Grid
+        grid = grid.tick()
         _ = gridView.drawGrid(grid)
     }
 }
