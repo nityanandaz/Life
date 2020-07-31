@@ -17,12 +17,13 @@ class DrawingVisitor: NSObject {
 }
 
 extension DrawingVisitor: GridVisitor {
-    func visitDenizen(_ denizen: NSObject?,
+    func visitDenizen(_ denizen: Cell?,
                       onGrid grid: Grid,
                       ofDimension n: Int,
                       atX x: Int,
-                      y: Int) -> NSObject {
-        let denizen = denizen as! Cell
+                      y: Int) -> Cell? {
+        guard let cell = denizen else { return nil }
+        
         let (n, x, y) = (CGFloat(n), CGFloat(x), CGFloat(y))
         
         let beginningHorizontal = x / n
@@ -37,13 +38,13 @@ extension DrawingVisitor: GridVisitor {
                               height: verticalExtent * boundsSize.height)
         
         let path = NSBezierPath(rect: cellRect)
-        NSColor(calibratedWhite: CGFloat(denizen.population),
+        NSColor(calibratedWhite: CGFloat(cell.population),
                 alpha: 1.0).set()
         path.stroke()
-        NSColor(calibratedWhite: 1.0 - CGFloat(denizen.population),
+        NSColor(calibratedWhite: 1.0 - CGFloat(cell.population),
                 alpha: 1.0).set()
         path.fill()
         
-        return denizen
+        return cell
     }
 }

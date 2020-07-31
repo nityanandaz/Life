@@ -17,11 +17,11 @@ class PopulateVisitor: NSObject {
 }
 
 extension PopulateVisitor: GridVisitor {
-    func visitDenizen(_ denizen: NSObject?,
+    func visitDenizen(_ denizen: Cell?,
                       onGrid grid: Grid,
                       ofDimension n: Int,
                       atX x: Int,
-                      y: Int) -> NSObject {
+                      y: Int) -> Cell? {
         return replacementDenizen
     }
 }

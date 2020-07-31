@@ -11,12 +11,12 @@ import Foundation
 class TickVisitor: NSObject {}
 
 extension TickVisitor: GridVisitor {
-    func visitDenizen(_ denizen: NSObject?,
+    func visitDenizen(_ denizen: Cell?,
                       onGrid grid: Grid,
                       ofDimension n: Int,
                       atX x: Int,
-                      y: Int) -> NSObject {
-        return (denizen as? Cell)?
-            .tick(onGrid: grid, atX: x, y: y) as! NSObject
+                      y: Int) -> Cell? {
+        return denizen?
+            .tick(onGrid: grid, atX: x, y: y) as? Cell
     }
 }

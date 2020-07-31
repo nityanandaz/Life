@@ -9,7 +9,7 @@
 import Foundation
 
 final class Visitation: NSObject {
-    var allVisited: [Cell]
+    var allVisited: [Cell?]
     var grid: Grid
     var visitor: GridVisitor
     
@@ -25,7 +25,7 @@ final class Visitation: NSObject {
         self.dimension = dimension
     }
     
-    func visitNext() -> NSObject {
+    func visitNext() -> Cell? {
         let x = cursor / dimension
         let y = cursor % dimension
         cursor += 1
@@ -35,7 +35,7 @@ final class Visitation: NSObject {
             ofDimension: dimension,
             atX: x,
             y: y)
-        allVisited.append(visited as! Cell)
+        allVisited.append(visited)
         return visited
     }
     
