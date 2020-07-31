@@ -8,7 +8,7 @@
 
 import Foundation
 
-final class LifeController: NSObject {
+public final class LifeController: NSObject {
     private static let gridSize: NSInteger = 15
     
     var grid: Grid

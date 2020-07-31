@@ -8,7 +8,7 @@
 
 import Cocoa
 
-final class GridView: NSView {
+public final class GridView: NSView {
 
     var currentGrid: Grid!
     var lifeController: LifeController!
@@ -19,11 +19,11 @@ final class GridView: NSView {
         return self
     }
     
-    override func draw(_ dirtyRect: NSRect) {
+    public override func draw(_ dirtyRect: NSRect) {
         _ = currentGrid?.visit(DrawingVisitor(view: self))
     }
     
-    override func mouseUp(with event: NSEvent) {
+    public override func mouseUp(with event: NSEvent) {
         let location = convert(event.locationInWindow, to: nil)
         let boundsSize = bounds.size
         let fractionX = location.x / boundsSize.width
