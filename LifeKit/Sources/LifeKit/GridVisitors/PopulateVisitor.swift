@@ -9,19 +9,19 @@
 import Foundation
 
 final class PopulateVisitor {
-    var replacementDenizen: CellProtocol
+    var replacementDenizen: Cell
     
-    init(replacementDenizen: CellProtocol) {
+    init(replacementDenizen: Cell) {
         self.replacementDenizen = replacementDenizen
     }
 }
 
 extension PopulateVisitor: GridVisitor {
-    func visitDenizen(_ denizen: CellProtocol?,
+    func visitDenizen(_ denizen: Cell?,
                       onGrid grid: Grid,
                       ofDimension n: Int,
                       atX x: Int,
-                      y: Int) -> CellProtocol? {
+                      y: Int) -> Cell? {
         return replacementDenizen
     }
 }

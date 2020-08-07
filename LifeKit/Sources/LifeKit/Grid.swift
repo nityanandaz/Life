@@ -10,9 +10,9 @@ import Foundation
 
 final class Grid {
     var n: Int
-    var array: [CellProtocol?]
+    var array: [Cell?]
     
-    init(sideLength: Int, dwellers: [CellProtocol?]) {
+    init(sideLength: Int, dwellers: [Cell?]) {
         assert(sideLength > 0)
         assert(dwellers.count == sideLength*sideLength)
         
@@ -36,14 +36,14 @@ extension Grid {
     convenience init(sideLength: Int) {
         assert(sideLength > 0)
         
-        let dwellers = Array<CellProtocol?>(repeating: nil,
+        let dwellers = Array<Cell?>(repeating: nil,
                              count: sideLength*sideLength)
         self.init(sideLength: sideLength, dwellers: dwellers)
     }
 }
 
 extension Grid {
-    func fill(with denizen: CellProtocol) -> Grid {
+    func fill(with denizen: Cell) -> Grid {
         self.visit(PopulateVisitor(
                     replacementDenizen: denizen))
     }
@@ -62,7 +62,7 @@ extension Grid {
         return visitazion.visitedGrid()
     }
     
-    func neighboursOf(x: Int, y: Int) -> [CellProtocol] {
+    func neighboursOf(x: Int, y: Int) -> [Cell] {
         [
             // Vertical
             at(x: x, y: y-1),
@@ -78,16 +78,16 @@ extension Grid {
         ].compactMap({ $0 })
     }
     
-    func at(x: Int, y: Int) -> CellProtocol? {
+    func at(x: Int, y: Int) -> Cell? {
         array[self.indexFor(x: x, y: y)]
     }
     
-    func at(x: Int, y: Int, perform action: (CellProtocol?) -> CellProtocol?) -> Grid {
+    func at(x: Int, y: Int, perform action: (Cell?) -> Cell?) -> Grid {
         return at(x: x, y: y, put:
                     action(at(x: x, y: y)))
     }
     
-    private func at(x: Int, y: Int, put object: CellProtocol?) -> Grid {
+    private func at(x: Int, y: Int, put object: Cell?) -> Grid {
         array[self.indexFor(x: x, y: y)] = object
         return Grid(sideLength: n, dwellers: array)
     }

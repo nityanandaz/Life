@@ -9,9 +9,9 @@
 import Foundation
 
 protocol GridVisitor: AnyObject {
-    func visitDenizen(_ denizen: CellProtocol?,
+    func visitDenizen(_ denizen: Cell?,
                       onGrid grid: Grid,
                       ofDimension n: Int,
                       atX x: Int,
-                      y: Int) -> CellProtocol?
+                      y: Int) -> Cell?
 }

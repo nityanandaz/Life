@@ -9,7 +9,22 @@
 import Foundation
 
 // MARK: - Cell
-class Cell {
+protocol Cell: AnyObject {
+    var population: Int { get }
+    var potentialStates: [Cell] { get }
+    
+    func changePopulation() -> Cell
+    func tickOn(grid: Grid, atX x: Int, y: Int) -> Cell
+}
+
+extension Cell where Self: AbstractCell {
+    func tickOn(grid: Grid, atX x: Int, y: Int) -> Cell {
+        potentialStates[neighbours(onGrid: grid, atX: x, y: y)]
+    }
+}
+
+// MARK: - AbstractCell
+class AbstractCell {
     static let livingCell = LivingCell()
     static let deadCell = DeadCell()
     
@@ -20,24 +35,9 @@ class Cell {
     }
 }
 
-// MARK: - CellProtocol
-protocol CellProtocol: AnyObject {
-    var population: Int { get }
-    var potentialStates: [CellProtocol] { get }
-    
-    func changePopulation() -> CellProtocol
-    func tickOn(grid: Grid, atX x: Int, y: Int) -> CellProtocol
-}
-
-extension CellProtocol where Self: Cell {
-    func tickOn(grid: Grid, atX x: Int, y: Int) -> CellProtocol {
-        potentialStates[neighbours(onGrid: grid, atX: x, y: y)]
-    }
-}
-
 // MARK: - LivingCell
-final class LivingCell: Cell, CellProtocol {
-    static let nextStatesFromLiving: [CellProtocol] = [
+final class LivingCell: AbstractCell, Cell {
+    static let nextStatesFromLiving: [Cell] = [
         deadCell,
         deadCell,
         livingCell,
@@ -51,18 +51,18 @@ final class LivingCell: Cell, CellProtocol {
     
     var population: Int { 1 }
     
-    var potentialStates: [CellProtocol] {
+    var potentialStates: [Cell] {
         Self.nextStatesFromLiving
     }
     
-    func changePopulation() -> CellProtocol {
+    func changePopulation() -> Cell {
         Self.deadCell
     }
 }
 
 // MARK: - DeadCell
-final class DeadCell: Cell, CellProtocol {
-    static let nextStatesFromDead: [CellProtocol] = [
+final class DeadCell: AbstractCell, Cell {
+    static let nextStatesFromDead: [Cell] = [
         deadCell,
         deadCell,
         deadCell,
@@ -76,11 +76,11 @@ final class DeadCell: Cell, CellProtocol {
     
     var population: Int { 0 }
     
-    var potentialStates: [CellProtocol] {
+    var potentialStates: [Cell] {
         Self.nextStatesFromDead
     }
     
-    func changePopulation() -> CellProtocol {
+    func changePopulation() -> Cell {
         Self.livingCell
     }
 }

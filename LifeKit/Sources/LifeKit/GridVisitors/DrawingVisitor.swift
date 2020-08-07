@@ -17,11 +17,11 @@ final class DrawingVisitor {
 }
 
 extension DrawingVisitor: GridVisitor {
-    func visitDenizen(_ denizen: CellProtocol?,
+    func visitDenizen(_ denizen: Cell?,
                       onGrid grid: Grid,
                       ofDimension n: Int,
                       atX x: Int,
-                      y: Int) -> CellProtocol? {
+                      y: Int) -> Cell? {
         guard let cell = denizen else { return nil }
         
         let (n, x, y) = (CGFloat(n), CGFloat(x), CGFloat(y))
