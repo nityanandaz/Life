@@ -28,7 +28,7 @@ public final class GridView: NSView {
         let boundsSize = bounds.size
         let fractionX = location.x / boundsSize.width
         let fractionY = location.y / boundsSize.height
-        _ = lifeController.changeCellAtRelative(x: Float(fractionX),
-                                                y: Float(fractionY))
+        _ = lifeController.changeCellAtRelative(x: fractionX,
+                                                y: fractionY)
     }
 }
