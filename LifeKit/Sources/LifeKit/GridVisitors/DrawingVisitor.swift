@@ -9,7 +9,7 @@
 import Cocoa
 
 final class DrawingVisitor {
-    var view: NSView
+    private let view: NSView
     
     init(view: NSView) {
         self.view = view

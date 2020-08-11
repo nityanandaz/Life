@@ -9,7 +9,7 @@
 import Foundation
 
 final class PopulateVisitor {
-    var replacementDenizen: Cell
+    private let replacementDenizen: Cell
     
     init(replacementDenizen: Cell) {
         self.replacementDenizen = replacementDenizen

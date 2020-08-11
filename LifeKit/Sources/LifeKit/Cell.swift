@@ -49,7 +49,7 @@ final class LivingCell: AbstractCell, Cell {
         deadCell,
     ]
     
-    var population: Int { 1 }
+    let population = 1
     
     var potentialStates: [Cell] {
         Self.nextStatesFromLiving
@@ -74,7 +74,7 @@ final class DeadCell: AbstractCell, Cell {
         deadCell,
     ]
     
-    var population: Int { 0 }
+    let population = 0
     
     var potentialStates: [Cell] {
         Self.nextStatesFromDead

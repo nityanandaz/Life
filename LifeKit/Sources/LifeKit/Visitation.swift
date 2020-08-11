@@ -9,12 +9,12 @@
 import Foundation
 
 final class Visitation {
-    var allVisited: [Cell?]
-    var grid: Grid
-    var visitor: GridVisitor
+    private let grid: Grid
+    private let dimension: Int
+    private let visitor: GridVisitor
     
-    var cursor: Int
-    var dimension: Int
+    private var cursor: Int
+    private var allVisited: [Cell?]
     
     init(grid: Grid, dimension: Int, visitor: GridVisitor) {
         self.allVisited = []

@@ -9,7 +9,7 @@
 import Foundation
 
 final class Grid {
-    var n: Int
+    private let n: Int
     var array: [Cell?]
     
     init(sideLength: Int, dwellers: [Cell?]) {
