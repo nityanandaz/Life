@@ -14,10 +14,9 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     var timer: Timer!
     
     func applicationDidFinishLaunching(_ notification: Notification) {
-        guard let gridView = NSApplication.shared
-                .mainWindow?
-                .contentViewController?
-                .view as? GridView else {
+        guard let window = NSApp.windows.first,
+              let controller = window.contentViewController,
+              let gridView = controller.view as? GridView else {
             fatalError()
         }
         
